@@ -32,5 +32,17 @@
     
     NSString *resultString = [[NSString alloc] initWithFormat:@"Celcius %f", celcius];
     _resultLabel.text = resultString;
+    [sender resignFirstResponder];
 }
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    if ([_tempText isFirstResponder] && [touch view] != _tempText) {
+        [_tempText resignFirstResponder];
+    }
+    
+    [super touchesBegan:touches withEvent:event];
+}
+
 @end
