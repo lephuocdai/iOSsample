@@ -73,4 +73,42 @@
     return YES;
 }
 
+- (void)showPhotoLibrary {
+    if (([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO)) {
+        return;
+    }
+    
+    UIImagePickerController *mediaUI = [[UIImagePickerController alloc] init];
+    mediaUI.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    // Display saved pictures from the Camera Roll album
+    mediaUI.mediaTypes = @[(NSString*)kUTTypeImage];
+    
+    // Hide the controls for moving & scaling pictures
+    mediaUI.allowsEditing = NO;
+    
+    mediaUI.delegate = self;
+    
+    [self.navigationController presentModalViewController:mediaUI animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        [self showPhotoLibrary];
+    }
+}
+
+
+
+
+
+
 @end
+
+
+
+
+
+
+
+

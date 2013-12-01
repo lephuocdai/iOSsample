@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MobileCoreServices/UTCoreTypes.h>
 
 @interface NewRecipeViewController : UITableViewController <UITextFieldDelegate>
 
