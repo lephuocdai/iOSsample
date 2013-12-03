@@ -50,6 +50,45 @@
 
 
 - (IBAction)save:(id)sender {
+    // Create PFObject with recipe information
+    PFObject *recipe = [PFObject objectWithClassName:@"Recipe"];
+    [recipe setObject:_nameTextField.text forKey:@"name"];
+    [recipe setObject:_prepTimeTextField.text forKey:@"prepTime"];
+    
+    NSArray *ingredients = [_ingredientsTextField.text componentsSeparatedByString:@","];
+    [recipe setObject:ingredients forKey:@"ingredients"];
+    
+    // Recipe image
+    NSData *imageData = UIImageJPEGRepresentation(_recipeImageView.image, 0.8);
+    NSString *filename = [NSString stringWithFormat:@"%@.png", _nameTextField.text];
+    PFFile *imageFile = [PFFile fileWithName:filename data:imageData];
+    [recipe setObject:imageFile forKey:@"imageFile"];
+    
+    // Show progress
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeDeterminate;
+    hud.labelText = @"Uploading";
+    [hud show:YES];
+    
+    // Uploading recipe to Parse
+    [recipe saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [hud hide:YES];
+        
+        if (!error) {
+            // Show success message
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Upload Complete" message:@"Successfully saved the recipe" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+            
+            // Notify table view to reload the recipes from Cloud
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshTable" object:self];
+            
+            // Dismiss the controller
+            [self dismissViewControllerAnimated:YES completion:nil];
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Upload Failure" message:[error localizedDescription] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+    }];
 }
 
 - (IBAction)cancel:(id)sender {

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MobileCoreServices/UTCoreTypes.h>
-
+#import "MBProgressHUD.h"
 
 @interface NewRecipeViewController : UITableViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate ,UITextFieldDelegate>
 
