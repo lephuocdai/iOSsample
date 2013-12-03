@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 
-@interface NewRecipeViewController : UITableViewController <UITextFieldDelegate>
+
+@interface NewRecipeViewController : UITableViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate ,UITextFieldDelegate>
 
 @end
