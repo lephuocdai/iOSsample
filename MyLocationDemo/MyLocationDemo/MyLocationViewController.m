@@ -56,6 +56,9 @@
         _latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
     }
     
+    // Stop Location Manager
+    [locationManager stopUpdatingLocation];
+    
     // Reverse Geocoding
     NSLog(@"Resolving the Address");
     [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
@@ -71,4 +74,5 @@
         }
     }];
 }
+
 @end
