@@ -13,6 +13,16 @@
 		F0718CB8185AC168009014A0 /* setting.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F0718CB3185AC168009014A0 /* setting.jpg */; };
 		F0718CB9185AC168009014A0 /* share.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F0718CB4185AC168009014A0 /* share.jpeg */; };
 		F0718CBA185AC168009014A0 /* stream.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F0718CB5185AC168009014A0 /* stream.jpeg */; };
+		F0718CBD185ACE27009014A0 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = F0718CBC185ACE27009014A0 /* Constants.m */; };
+		F0718CC2185ACEB1009014A0 /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0718CC1185ACEB1009014A0 /* FileViewController.m */; };
+		F0718CC4185ACECC009014A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0718CC3185ACECC009014A0 /* QuartzCore.framework */; };
+		F0718CC6185ACED5009014A0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0718CC5185ACED5009014A0 /* CoreMedia.framework */; };
+		F0718CC8185ACEDD009014A0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0718CC7185ACEDD009014A0 /* AVFoundation.framework */; };
+		F0718CCA185ACEE7009014A0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0718CC9185ACEE7009014A0 /* MediaPlayer.framework */; };
+		F0718CCC185ACEF3009014A0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0718CCB185ACEF3009014A0 /* MobileCoreServices.framework */; };
+		F0718CCE185ACEFC009014A0 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0718CCD185ACEFC009014A0 /* AssetsLibrary.framework */; };
+		F0718CD1185ACF36009014A0 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0718CCF185ACF36009014A0 /* AWSRuntime.framework */; };
+		F0718CD2185ACF36009014A0 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0718CD0185ACF36009014A0 /* AWSS3.framework */; };
 		F4EECF12177C99F400778578 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EECF11177C99F400778578 /* UIKit.framework */; };
 		F4EECF14177C99F400778578 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EECF13177C99F400778578 /* Foundation.framework */; };
 		F4EECF16177C99F400778578 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EECF15177C99F400778578 /* CoreGraphics.framework */; };
@@ -55,6 +65,18 @@
 		F0718CB3185AC168009014A0 /* setting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = setting.jpg; sourceTree = "<group>"; };
 		F0718CB4185AC168009014A0 /* share.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = share.jpeg; sourceTree = "<group>"; };
 		F0718CB5185AC168009014A0 /* stream.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stream.jpeg; sourceTree = "<group>"; };
+		F0718CBB185ACE27009014A0 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		F0718CBC185ACE27009014A0 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		F0718CC0185ACEB1009014A0 /* FileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileViewController.h; sourceTree = "<group>"; };
+		F0718CC1185ACEB1009014A0 /* FileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileViewController.m; sourceTree = "<group>"; };
+		F0718CC3185ACECC009014A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F0718CC5185ACED5009014A0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F0718CC7185ACEDD009014A0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F0718CC9185ACEE7009014A0 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		F0718CCB185ACEF3009014A0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F0718CCD185ACEFC009014A0 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		F0718CCF185ACF36009014A0 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSRuntime.framework; sourceTree = "<group>"; };
+		F0718CD0185ACF36009014A0 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSS3.framework; sourceTree = "<group>"; };
 		F4EECF0E177C99F400778578 /* Presentice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Presentice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4EECF11177C99F400778578 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F4EECF13177C99F400778578 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -102,8 +124,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0718CCE185ACEFC009014A0 /* AssetsLibrary.framework in Frameworks */,
+				F0718CCC185ACEF3009014A0 /* MobileCoreServices.framework in Frameworks */,
+				F0718CCA185ACEE7009014A0 /* MediaPlayer.framework in Frameworks */,
+				F0718CD1185ACF36009014A0 /* AWSRuntime.framework in Frameworks */,
+				F0718CC8185ACEDD009014A0 /* AVFoundation.framework in Frameworks */,
+				F0718CC6185ACED5009014A0 /* CoreMedia.framework in Frameworks */,
+				F0718CC4185ACECC009014A0 /* QuartzCore.framework in Frameworks */,
 				F4EECF72177FE9BA00778578 /* MapKit.framework in Frameworks */,
 				F4EECF70177FE9B400778578 /* CoreLocation.framework in Frameworks */,
+				F0718CD2185ACF36009014A0 /* AWSS3.framework in Frameworks */,
 				F4EECF12177C99F400778578 /* UIKit.framework in Frameworks */,
 				F4EECF14177C99F400778578 /* Foundation.framework in Frameworks */,
 				F4EECF16177C99F400778578 /* CoreGraphics.framework in Frameworks */,
@@ -113,6 +143,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F0718CBE185ACE41009014A0 /* Stream */ = {
+			isa = PBXGroup;
+			children = (
+				F4EECF2C177C99F400778578 /* MainViewController.h */,
+				F4EECF2D177C99F400778578 /* MainViewController.m */,
+				F0718CC0185ACEB1009014A0 /* FileViewController.h */,
+				F0718CC1185ACEB1009014A0 /* FileViewController.m */,
+			);
+			name = Stream;
+			sourceTree = "<group>";
+		};
+		F0718CBF185ACE8B009014A0 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				F4EECF6C177FD51300778578 /* ShareViewController.h */,
+				F4EECF6D177FD51300778578 /* ShareViewController.m */,
+			);
+			name = Share;
+			sourceTree = "<group>";
+		};
 		F4EECF05177C99F400778578 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +185,14 @@
 		F4EECF10177C99F400778578 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0718CCF185ACF36009014A0 /* AWSRuntime.framework */,
+				F0718CD0185ACF36009014A0 /* AWSS3.framework */,
+				F0718CCD185ACEFC009014A0 /* AssetsLibrary.framework */,
+				F0718CCB185ACEF3009014A0 /* MobileCoreServices.framework */,
+				F0718CC9185ACEE7009014A0 /* MediaPlayer.framework */,
+				F0718CC7185ACEDD009014A0 /* AVFoundation.framework */,
+				F0718CC5185ACED5009014A0 /* CoreMedia.framework */,
+				F0718CC3185ACECC009014A0 /* QuartzCore.framework */,
 				F4EECF11177C99F400778578 /* UIKit.framework */,
 				F4EECF13177C99F400778578 /* Foundation.framework */,
 				F4EECF15177C99F400778578 /* CoreGraphics.framework */,
@@ -145,15 +203,11 @@
 		F4EECF17177C99F400778578 /* SidebarDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F4EECF29177C99F400778578 /* MainStoryboard.storyboard */,
+				F0718CBF185ACE8B009014A0 /* Share */,
+				F0718CBE185ACE41009014A0 /* Stream */,
 				F4EECF20177C99F400778578 /* AppDelegate.h */,
 				F4EECF21177C99F400778578 /* AppDelegate.m */,
-				F4EECF29177C99F400778578 /* MainStoryboard.storyboard */,
-				F4EECF2C177C99F400778578 /* MainViewController.h */,
-				F4EECF2D177C99F400778578 /* MainViewController.m */,
-				F4EECF48177DF87700778578 /* SidebarViewController.h */,
-				F4EECF49177DF87700778578 /* SidebarViewController.m */,
-				F4EECF6C177FD51300778578 /* ShareViewController.h */,
-				F4EECF6D177FD51300778578 /* ShareViewController.m */,
 				F4EECF73177FF90500778578 /* SettingViewController.h */,
 				F4EECF74177FF90600778578 /* SettingViewController.m */,
 				F4EECF34177C9A1E00778578 /* Library */,
@@ -165,6 +219,10 @@
 		F4EECF18177C99F400778578 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F4EECF48177DF87700778578 /* SidebarViewController.h */,
+				F4EECF49177DF87700778578 /* SidebarViewController.m */,
+				F0718CBB185ACE27009014A0 /* Constants.h */,
+				F0718CBC185ACE27009014A0 /* Constants.m */,
 				F4EECF53177F37CB00778578 /* Images */,
 				F4EECF19177C99F400778578 /* Presentice-Info.plist */,
 				F4EECF1A177C99F400778578 /* InfoPlist.strings */,
@@ -304,6 +362,8 @@
 				F0718CB0185ABF23009014A0 /* SWRevealViewController.m in Sources */,
 				F4EECF1E177C99F400778578 /* main.m in Sources */,
 				F4EECF22177C99F400778578 /* AppDelegate.m in Sources */,
+				F0718CC2185ACEB1009014A0 /* FileViewController.m in Sources */,
+				F0718CBD185ACE27009014A0 /* Constants.m in Sources */,
 				F4EECF2E177C99F400778578 /* MainViewController.m in Sources */,
 				F4EECF4A177DF87700778578 /* SidebarViewController.m in Sources */,
 				F4EECF6E177FD51400778578 /* ShareViewController.m in Sources */,
@@ -392,6 +452,10 @@
 		F4EECF32177C99F400778578 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/lephuocdai/Documents/Courses/iOSDev/03_practice/Presentice,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SidebarDemo/Presentice-Prefix.pch";
 				INFOPLIST_FILE = "SidebarDemo/Presentice-Info.plist";
@@ -403,6 +467,10 @@
 		F4EECF33177C99F400778578 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/lephuocdai/Documents/Courses/iOSDev/03_practice/Presentice,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SidebarDemo/Presentice-Prefix.pch";
 				INFOPLIST_FILE = "SidebarDemo/Presentice-Info.plist";
