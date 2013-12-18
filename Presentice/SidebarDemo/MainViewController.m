@@ -158,10 +158,22 @@
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Log In Error" message:[error description] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil];
                 [alert show];
             }
-        } else if (user.isNew) {
-            NSLog(@"User with facebook signed up and logged in!");
         } else {
-            NSLog(@"User with facebook logged in!");
+            if (user.isNew) {
+                NSLog(@"User with facebook signed up and logged in!");
+            } else {
+                NSLog(@"User with facebook logged in!");
+            }
+            [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                if(!error){
+                    NSDictionary<FBGraphUser> *me = (NSDictionary<FBGraphUser> *)result;
+                    // Store the Facebook Id
+                    [[PFUser currentUser] setObject:[NSNumber numberWithBool:NO] forKey:@"activated"];
+                    [[PFUser currentUser] setObject:me.id forKey:@"facebookId"];
+                    [[PFUser currentUser] setObject:me.name forKey:@"displayName"];
+                    [[PFUser currentUser] saveInBackground];
+                }
+            }];
         }
     }];
     
