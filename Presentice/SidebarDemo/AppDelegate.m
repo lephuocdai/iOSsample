@@ -16,7 +16,7 @@
     
     // ****************************************************************************
     // Parse initialization
-    [Parse setApplicationId:@"NoQlDrE7U3ZXdO1C2CQ11iPXrMcCpVkIkHeF9pP0" clientKey:@"pasFYkuFk7m9tGYyAa0jzb7UscnVN1ZaTpAX4JOg"];
+    [Parse setApplicationId:@"Q7ub1yg5A0AmDAnwnzVc2SS0X0Q4UZMefq3Kukdf" clientKey:@"W4MvbeHuoqhmtPhvGHt29JziWfFeVJNbuaFp2lr1"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [PFFacebookUtils initializeFacebook];
     // ****************************************************************************
