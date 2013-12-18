@@ -16,6 +16,8 @@
 #import "FileViewController.h"
 #import "Constants.h"
 
+#import <Parse/Parse.h>
+
 @interface MainViewController : UIViewController <UINavigationControllerDelegate, AmazonServiceRequestDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;

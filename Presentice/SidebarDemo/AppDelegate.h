@@ -10,8 +10,7 @@
 #import <Parse/Parse.h>
 
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, PFLogInViewControllerDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, NSURLConnectionDataDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @end
