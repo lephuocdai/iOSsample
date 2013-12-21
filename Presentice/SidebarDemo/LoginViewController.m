@@ -26,7 +26,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    //hide navigator if in login view
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    
+    //if user already login, redirect to MainViewController
+	if([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]){
+        [self performSegueWithIdentifier:@"toMainView" sender:self];
+
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,9 +76,16 @@
                     [[PFUser currentUser] saveInBackground];
                 }
             }];
+            [self performSegueWithIdentifier:@"toMainView" sender:self];
         }
     }];
-    
 }
 
+- (IBAction)didPressLoginButton:(id)sender {
+    [self loginFB];
+}
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    //show navigator
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 @end

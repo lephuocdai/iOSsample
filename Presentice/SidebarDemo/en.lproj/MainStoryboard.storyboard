@@ -8,7 +8,7 @@
         <!--Setting View Controller-->
         <scene sceneID="35X-ST-BRw">
             <objects>
-                <viewController id="tiA-fo-4jg" customClass="SettingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoryBoard_Setting" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tiA-fo-4jg" customClass="SettingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="goD-s6-caP"/>
                         <viewControllerLayoutGuide type="bottom" id="mRo-gU-xxd"/>
@@ -18,11 +18,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38J-ng-kql">
-                                <rect key="frame" x="137" y="143" width="49" height="30"/>
+                                <rect key="frame" x="130" y="269" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="B1c-Gu-Hqa" kind="push" identifier="toLoginView" id="hTC-QJ-FLQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -37,35 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpc-aD-cqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1733" y="-1063"/>
-        </scene>
-        <!--Login View Controller-->
-        <scene sceneID="pW3-aq-Iap">
-            <objects>
-                <viewController storyboardIdentifier="Storyboard_Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vf1-rn-MOh" customClass="LoginViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yNZ-ah-tq0"/>
-                        <viewControllerLayoutGuide type="bottom" id="TEp-Rw-pHc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="LoginViewController" id="EmL-IO-w4o">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPW-h6-u9n">
-                                <rect key="frame" x="137" y="223" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="FB Login">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Ixt-EK-Cuw"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lyy-JR-a5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="597" y="-797"/>
+            <point key="canvasLocation" x="2259" y="-1063"/>
         </scene>
         <!--Share View Controller-->
         <scene sceneID="gbA-tY-N7d">
@@ -126,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1O-sx-2nD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1733" y="-371"/>
+            <point key="canvasLocation" x="2259" y="-371"/>
         </scene>
         <!--Main View Controller - Main View Controller-->
         <scene sceneID="5">
@@ -206,6 +181,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4VM-aY-zRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1719" y="349"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="y9c-x9-gVr">
+            <objects>
+                <viewController storyboardIdentifier="Storyboard_Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B1c-Gu-Hqa" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Slm-l0-0pW"/>
+                        <viewControllerLayoutGuide type="bottom" id="AXf-9H-po3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XQ2-sW-dY0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qek-De-G98">
+                                <rect key="frame" x="115" y="269" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="FB Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressLoginButton:" destination="B1c-Gu-Hqa" eventType="touchUpInside" id="Pr2-9O-d55"/>
+                                    <segue destination="2" kind="push" identifier="toMainView" id="OP8-kV-dl6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7XT-NV-mbO"/>
+                    <connections>
+                        <outlet property="btnFBLogin" destination="qek-De-G98" id="GPt-vk-neF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CWr-gd-eFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056" y="-835"/>
         </scene>
         <!--Sidebar View Controller - Sidebar-->
         <scene sceneID="8EI-Ei-zax">
@@ -315,7 +325,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pan-AZ-D0k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1103" y="-371"/>
+            <point key="canvasLocation" x="1629" y="-371"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Z6-ag-ZQ1">
@@ -328,7 +338,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="rootViewController" id="zaF-c6-UNR"/>
+                        <segue destination="B1c-Gu-Hqa" kind="relationship" relationship="rootViewController" id="b5z-uv-nQA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOb-gn-Bt7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -357,24 +367,6 @@
             </objects>
             <point key="canvasLocation" x="71" y="-5"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="dGX-hc-n5Q">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bu9-Cc-aEY" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nnw-8R-ozH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vf1-rn-MOh" kind="relationship" relationship="rootViewController" id="owI-0w-IWU"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wqd-oY-TBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="71" y="-797"/>
-        </scene>
     </scenes>
     <resources>
         <image name="icon.png" width="800" height="800"/>
@@ -389,6 +381,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="zaF-c6-UNR"/>
+        <segue reference="hTC-QJ-FLQ"/>
+        <segue reference="OP8-kV-dl6"/>
     </inferredMetricsTieBreakers>
 </document>
