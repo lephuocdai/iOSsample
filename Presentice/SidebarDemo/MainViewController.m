@@ -26,14 +26,12 @@
 {
     [super viewDidLoad];
 
-    //test Parse
-    [self loginFB];
-    
-//    self.title = @"News";
-    
-    // Change button color
-    //_sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
-    
+    //login using Facebook
+    //check if user is cached, so do not show login popup
+    if(!([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]])){
+        [self loginFB];
+    }
+
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
     _sidebarButton.target = self.revealViewController;
     _sidebarButton.action = @selector(revealToggle:);
