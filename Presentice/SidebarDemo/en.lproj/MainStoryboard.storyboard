@@ -61,7 +61,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Meq-yH-YF6" kind="modal" identifier="Login" id="Rfw-eh-pdj"/>
+                                    <segue destination="2" kind="modal" identifier="Login" id="IG5-FL-mBS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -398,7 +398,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Rfw-eh-pdj"/>
-        <segue reference="YOI-Ex-RyJ"/>
+        <segue reference="IG5-FL-mBS"/>
     </inferredMetricsTieBreakers>
 </document>
