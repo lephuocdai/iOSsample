@@ -13,6 +13,4 @@
 @interface SettingViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (strong, nonatomic) NSString *photoFilename;
-- (IBAction)logoutButtonTouchHandler:(id)sender;
-
 @end

@@ -46,10 +46,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)logoutButtonTouchHandler:(id)sender {
-    [PFUser logOut];
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"Storyboard_Login"];
-    [self.navigationController pushViewController: myController animated:YES];
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"Login"]) {
+        [PFUser logOut];
+    }
 }
 @end

@@ -72,11 +72,5 @@
     }];
     
 }
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"login");
-    if ([segue.identifier isEqualToString:@"Login"]) {
-        [self loginFB];
-    }
 
-}
 @end
