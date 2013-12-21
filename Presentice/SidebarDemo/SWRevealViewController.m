@@ -1066,7 +1066,9 @@ static NSString * const SWSegueRightIdentifier = @"sw_right";
     void (^rightDeploymentCompletion)() = [self _rightViewDeploymentForNewFrontViewPosition:newPosition];
     void (^frontDeploymentCompletion)() = [self _frontViewDeploymentForNewFrontViewPosition:newPosition];
     
-    [self setNeedsStatusBarAppearanceUpdate];
+    
+    // Fix bug: "[SWRevealViewController setNeedsStatusBarAppearanceUpdate]: unrecognized selector sent to instance 0x1dd38330"
+    // [self setNeedsStatusBarAppearanceUpdate];
     
     void (^animations)() = ^()
     {

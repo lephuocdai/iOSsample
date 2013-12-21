@@ -92,7 +92,6 @@
             // Get the URL
             NSError *error;
             NSURL *url = [s3Client getPreSignedURL:gpsur error:&error];
-            NSLog(@"file url: %@", url);
             
             // Add new file to fileList
             NSMutableDictionary *file = [NSMutableDictionary dictionary];
