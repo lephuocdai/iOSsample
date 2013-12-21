@@ -25,15 +25,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    //test Parse
-    [self loginFB];
     
-//    self.title = @"News";
-    
-    // Change button color
-    //_sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
-    
+    //login using Facebook
+    //check if user is cached, so do not show login popup
+    if(!([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]])){
+        [self loginFB];
+    }
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
     _sidebarButton.target = self.revealViewController;
     _sidebarButton.action = @selector(revealToggle:);
@@ -144,7 +141,7 @@
 }
 - (void) loginFB {
     // Set permissions required from the facebook user account
-    NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location"];
+    NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location", @"email"];
     
     // Login PFUser using facebook
     [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
@@ -171,6 +168,7 @@
                     [[PFUser currentUser] setObject:[NSNumber numberWithBool:NO] forKey:@"activated"];
                     [[PFUser currentUser] setObject:me.id forKey:@"facebookId"];
                     [[PFUser currentUser] setObject:me.name forKey:@"displayName"];
+                    [[PFUser currentUser] setObject:[me objectForKey:@"email"] forKey:@"email"];
                     [[PFUser currentUser] saveInBackground];
                 }
             }];

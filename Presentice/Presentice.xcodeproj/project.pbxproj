@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A73D5A1418653BF700087F27 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A73D5A1318653BF700087F27 /* LoginViewController.m */; };
 		A78E9D31185D99D900ACCC54 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A78E9D2E185D99D900ACCC54 /* FacebookSDKResources.bundle */; };
 		A78E9D32185D99D900ACCC54 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78E9D2F185D99D900ACCC54 /* FacebookSDK.framework */; };
 		A78E9D33185D99DA00ACCC54 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78E9D30185D99D900ACCC54 /* Parse.framework */; };
@@ -78,6 +79,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A73D5A1218653BF700087F27 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A73D5A1318653BF700087F27 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		A78E9D2E185D99D900ACCC54 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = External/FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		A78E9D2F185D99D900ACCC54 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = External/FacebookSDK.framework; sourceTree = "<group>"; };
 		A78E9D30185D99D900ACCC54 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = External/Parse.framework; sourceTree = "<group>"; };
@@ -202,6 +205,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A73D5A1118653BD700087F27 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A73D5A1218653BF700087F27 /* LoginViewController.h */,
+				A73D5A1318653BF700087F27 /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		A78E9D50185DA15700ACCC54 /* External */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +332,7 @@
 		F4EECF17177C99F400778578 /* SidebarDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A73D5A1118653BD700087F27 /* Login */,
 				F4EECF29177C99F400778578 /* MainStoryboard.storyboard */,
 				F0718CBF185ACE8B009014A0 /* Share */,
 				F0718CBE185ACE41009014A0 /* Stream */,
@@ -479,6 +492,7 @@
 			files = (
 				F0718CB0185ABF23009014A0 /* SWRevealViewController.m in Sources */,
 				A78E9D5C185DA16B00ACCC54 /* TTTTimeIntervalFormatter.m in Sources */,
+				A73D5A1418653BF700087F27 /* LoginViewController.m in Sources */,
 				F4EECF1E177C99F400778578 /* main.m in Sources */,
 				F4EECF22177C99F400778578 /* AppDelegate.m in Sources */,
 				A78E9D5B185DA16B00ACCC54 /* Reachability.m in Sources */,
