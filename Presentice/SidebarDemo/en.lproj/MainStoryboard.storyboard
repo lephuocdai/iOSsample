@@ -36,6 +36,36 @@
             </objects>
             <point key="canvasLocation" x="1207" y="-1063"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="pW3-aq-Iap">
+            <objects>
+                <viewController storyboardIdentifier="Storyboard_Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vf1-rn-MOh" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yNZ-ah-tq0"/>
+                        <viewControllerLayoutGuide type="bottom" id="TEp-Rw-pHc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="LoginViewController" id="EmL-IO-w4o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPW-h6-u9n">
+                                <rect key="frame" x="137" y="223" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="FB Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnFBLogin" destination="jPW-h6-u9n" id="aJE-Dy-OIh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lyy-JR-a5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1600" y="-1063"/>
+        </scene>
         <!--Share View Controller-->
         <scene sceneID="gbA-tY-N7d">
             <objects>
