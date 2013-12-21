@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
+#import <Parse/Parse.h>
 
 @interface SettingViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
-@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (strong, nonatomic) NSString *photoFilename;
+- (IBAction)logoutButtonTouchHandler:(id)sender;
+
 @end

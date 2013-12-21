@@ -27,9 +27,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Load image
-    self.photoImageView.image = [UIImage imageNamed:self.photoFilename];
     
     // Change button color
     //_sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
@@ -49,4 +46,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)logoutButtonTouchHandler:(id)sender {
+    [PFUser logOut];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"Storyboard_Login"];
+    [self.navigationController pushViewController: myController animated:YES];
+}
 @end

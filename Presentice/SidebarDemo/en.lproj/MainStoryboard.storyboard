@@ -17,9 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U1F-y3-glx">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="224"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38J-ng-kql">
+                                <rect key="frame" x="137" y="143" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonTouchHandler:" destination="tiA-fo-4jg" eventType="touchUpInside" id="KLe-eB-6Ym"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -28,13 +35,12 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="photoImageView" destination="U1F-y3-glx" id="hTu-1H-aff"/>
                         <outlet property="sidebarButton" destination="mXk-4A-iOH" id="5MG-0e-JdI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpc-aD-cqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207" y="-1063"/>
+            <point key="canvasLocation" x="1733" y="-1063"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="pW3-aq-Iap">
@@ -54,17 +60,21 @@
                                 <state key="normal" title="FB Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Meq-yH-YF6" kind="modal" identifier="Login" id="Rfw-eh-pdj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ixt-EK-Cuw"/>
                     <connections>
                         <outlet property="btnFBLogin" destination="jPW-h6-u9n" id="aJE-Dy-OIh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lyy-JR-a5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="71" y="-797"/>
+            <point key="canvasLocation" x="597" y="-797"/>
         </scene>
         <!--Share View Controller-->
         <scene sceneID="gbA-tY-N7d">
@@ -125,12 +135,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1O-sx-2nD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207" y="-371"/>
+            <point key="canvasLocation" x="1733" y="-371"/>
         </scene>
         <!--Main View Controller - Main View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController title="Main View Controller" id="2" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoryBoard_Main" title="Main View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Pv-qd-93w"/>
                         <viewControllerLayoutGuide type="bottom" id="l5Y-XK-iUu"/>
@@ -310,10 +320,11 @@
                             <outlet property="delegate" destination="Meq-yH-YF6" id="C52-d2-AjR"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="pCI-6V-Mc8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pan-AZ-D0k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="-371"/>
+            <point key="canvasLocation" x="1103" y="-371"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Z6-ag-ZQ1">
@@ -355,6 +366,24 @@
             </objects>
             <point key="canvasLocation" x="71" y="-5"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dGX-hc-n5Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bu9-Cc-aEY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nnw-8R-ozH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vf1-rn-MOh" kind="relationship" relationship="rootViewController" id="owI-0w-IWU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wqd-oY-TBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71" y="-797"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icon.png" width="800" height="800"/>
@@ -369,6 +398,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="Rfw-eh-pdj"/>
         <segue reference="YOI-Ex-RyJ"/>
     </inferredMetricsTieBreakers>
 </document>
