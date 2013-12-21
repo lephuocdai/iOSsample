@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+
 
 @interface LoginViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *btnFBLogin;
-
 @end

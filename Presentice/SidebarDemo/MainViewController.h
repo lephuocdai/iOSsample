@@ -14,7 +14,6 @@
 #import <AWSS3/AWSS3.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "FileViewController.h"
-#import "LoginViewController.h"
 #import "Constants.h"
 
 #import <Parse/Parse.h>

@@ -21,6 +21,14 @@
     [PFFacebookUtils initializeFacebook];
     // ****************************************************************************
     
+    //load login page if not login
+    //check if user is cached, so do not show login popup
+    if(!([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]])){
+        self.window.rootViewController = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier: @"Storyboard_Login"] ;
+    }
+
+    
+/*
     UIImage *navBackgroundImage = [UIImage imageNamed:@"nav_bg"];
     [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
     
@@ -30,7 +38,7 @@
                                                            [NSValue valueWithUIOffset:UIOffsetMake(0, 0)],
                                                            UITextAttributeTextShadowOffset,
                                                            [UIFont fontWithName:@"Helvetica-Light" size:20.0], UITextAttributeFont, nil]];
-    
+    */
     return YES;
 }
 							
