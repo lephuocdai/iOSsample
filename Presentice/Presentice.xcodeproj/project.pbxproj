@@ -45,6 +45,8 @@
 		F0718CD1185ACF36009014A0 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0718CCF185ACF36009014A0 /* AWSRuntime.framework */; };
 		F0718CD2185ACF36009014A0 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0718CD0185ACF36009014A0 /* AWSS3.framework */; };
 		F09EBCC71866897A009C2BC9 /* myList.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F09EBCC61866897A009C2BC9 /* myList.jpeg */; };
+		F09EBCC918672BF9009C2BC9 /* newsFeed.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F09EBCC818672BF9009C2BC9 /* newsFeed.jpeg */; };
+		F09EBCCB18672CC3009C2BC9 /* notification.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F09EBCCA18672CC3009C2BC9 /* notification.jpeg */; };
 		F4EECF12177C99F400778578 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EECF11177C99F400778578 /* UIKit.framework */; };
 		F4EECF14177C99F400778578 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EECF13177C99F400778578 /* Foundation.framework */; };
 		F4EECF16177C99F400778578 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EECF15177C99F400778578 /* CoreGraphics.framework */; };
@@ -59,7 +61,7 @@
 		F4EECF4A177DF87700778578 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EECF49177DF87700778578 /* SidebarViewController.m */; };
 		F4EECF5B177F384900778578 /* bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = F4EECF54177F384900778578 /* bookmark.png */; };
 		F4EECF5C177F384900778578 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = F4EECF55177F384900778578 /* calendar.png */; };
-		F4EECF5D177F384900778578 /* comments.png in Resources */ = {isa = PBXBuildFile; fileRef = F4EECF56177F384900778578 /* comments.png */; };
+		F4EECF5D177F384900778578 /* message.png in Resources */ = {isa = PBXBuildFile; fileRef = F4EECF56177F384900778578 /* message.png */; };
 		F4EECF5E177F384900778578 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = F4EECF57177F384900778578 /* map.png */; };
 		F4EECF5F177F384900778578 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = F4EECF58177F384900778578 /* news.png */; };
 		F4EECF60177F384900778578 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = F4EECF59177F384900778578 /* photo.png */; };
@@ -125,6 +127,8 @@
 		F0718CCF185ACF36009014A0 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSRuntime.framework; sourceTree = "<group>"; };
 		F0718CD0185ACF36009014A0 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSS3.framework; sourceTree = "<group>"; };
 		F09EBCC61866897A009C2BC9 /* myList.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = myList.jpeg; sourceTree = "<group>"; };
+		F09EBCC818672BF9009C2BC9 /* newsFeed.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = newsFeed.jpeg; sourceTree = "<group>"; };
+		F09EBCCA18672CC3009C2BC9 /* notification.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = notification.jpeg; sourceTree = "<group>"; };
 		F4EECF0E177C99F400778578 /* Presentice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Presentice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4EECF11177C99F400778578 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F4EECF13177C99F400778578 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -145,7 +149,7 @@
 		F4EECF49177DF87700778578 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
 		F4EECF54177F384900778578 /* bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark.png; sourceTree = "<group>"; };
 		F4EECF55177F384900778578 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
-		F4EECF56177F384900778578 /* comments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comments.png; sourceTree = "<group>"; };
+		F4EECF56177F384900778578 /* message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = message.png; sourceTree = "<group>"; };
 		F4EECF57177F384900778578 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		F4EECF58177F384900778578 /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news.png; sourceTree = "<group>"; };
 		F4EECF59177F384900778578 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
@@ -379,6 +383,8 @@
 		F4EECF53177F37CB00778578 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F09EBCCA18672CC3009C2BC9 /* notification.jpeg */,
+				F09EBCC818672BF9009C2BC9 /* newsFeed.jpeg */,
 				F09EBCC61866897A009C2BC9 /* myList.jpeg */,
 				F0718CB1185AC168009014A0 /* icon.png */,
 				F0718CB2185AC168009014A0 /* record.jpeg */,
@@ -395,7 +401,7 @@
 				F4EECF65177F4AB000778578 /* nav_bg.png */,
 				F4EECF54177F384900778578 /* bookmark.png */,
 				F4EECF55177F384900778578 /* calendar.png */,
-				F4EECF56177F384900778578 /* comments.png */,
+				F4EECF56177F384900778578 /* message.png */,
 				F4EECF57177F384900778578 /* map.png */,
 				F4EECF58177F384900778578 /* news.png */,
 				F4EECF59177F384900778578 /* photo.png */,
@@ -460,16 +466,18 @@
 				F4EECF24177C99F400778578 /* Default.png in Resources */,
 				F0718CB7185AC168009014A0 /* record.jpeg in Resources */,
 				F4EECF26177C99F400778578 /* Default@2x.png in Resources */,
+				F09EBCC918672BF9009C2BC9 /* newsFeed.jpeg in Resources */,
 				F4EECF28177C99F400778578 /* Default-568h@2x.png in Resources */,
 				F09EBCC71866897A009C2BC9 /* myList.jpeg in Resources */,
 				F0718CB9185AC168009014A0 /* share.jpeg in Resources */,
 				F4EECF2B177C99F400778578 /* MainStoryboard.storyboard in Resources */,
 				F4EECF5B177F384900778578 /* bookmark.png in Resources */,
+				F09EBCCB18672CC3009C2BC9 /* notification.jpeg in Resources */,
 				F0718CB6185AC168009014A0 /* icon.png in Resources */,
 				F0718CB8185AC168009014A0 /* setting.jpg in Resources */,
 				F4EECF5C177F384900778578 /* calendar.png in Resources */,
 				F0718CBA185AC168009014A0 /* stream.jpeg in Resources */,
-				F4EECF5D177F384900778578 /* comments.png in Resources */,
+				F4EECF5D177F384900778578 /* message.png in Resources */,
 				F4EECF5E177F384900778578 /* map.png in Resources */,
 				F4EECF5F177F384900778578 /* news.png in Resources */,
 				F4EECF60177F384900778578 /* photo.png in Resources */,

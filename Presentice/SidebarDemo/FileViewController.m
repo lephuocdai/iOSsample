@@ -44,7 +44,7 @@
     self.movieController = [[MPMoviePlayerController alloc] init];
     
     [self.movieController setContentURL:self.movieURL];
-    [self.movieController.view setFrame:CGRectMake(0, 105, 320, 414)];
+    [self.movieController.view setFrame:CGRectMake(0, 60, 320, 300)];
     [self.view addSubview:self.movieController.view];
     
     // Using the Movie Player Notifications
