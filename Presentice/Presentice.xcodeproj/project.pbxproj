@@ -44,6 +44,7 @@
 		F0718CCE185ACEFC009014A0 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0718CCD185ACEFC009014A0 /* AssetsLibrary.framework */; };
 		F0718CD1185ACF36009014A0 /* AWSRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0718CCF185ACF36009014A0 /* AWSRuntime.framework */; };
 		F0718CD2185ACF36009014A0 /* AWSS3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0718CD0185ACF36009014A0 /* AWSS3.framework */; };
+		F09EBCC71866897A009C2BC9 /* myList.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F09EBCC61866897A009C2BC9 /* myList.jpeg */; };
 		F4EECF12177C99F400778578 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EECF11177C99F400778578 /* UIKit.framework */; };
 		F4EECF14177C99F400778578 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EECF13177C99F400778578 /* Foundation.framework */; };
 		F4EECF16177C99F400778578 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EECF15177C99F400778578 /* CoreGraphics.framework */; };
@@ -123,6 +124,7 @@
 		F0718CCD185ACEFC009014A0 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		F0718CCF185ACF36009014A0 /* AWSRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSRuntime.framework; sourceTree = "<group>"; };
 		F0718CD0185ACF36009014A0 /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSS3.framework; sourceTree = "<group>"; };
+		F09EBCC61866897A009C2BC9 /* myList.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = myList.jpeg; sourceTree = "<group>"; };
 		F4EECF0E177C99F400778578 /* Presentice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Presentice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4EECF11177C99F400778578 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F4EECF13177C99F400778578 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -377,6 +379,7 @@
 		F4EECF53177F37CB00778578 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F09EBCC61866897A009C2BC9 /* myList.jpeg */,
 				F0718CB1185AC168009014A0 /* icon.png */,
 				F0718CB2185AC168009014A0 /* record.jpeg */,
 				F0718CB3185AC168009014A0 /* setting.jpg */,
@@ -458,6 +461,7 @@
 				F0718CB7185AC168009014A0 /* record.jpeg in Resources */,
 				F4EECF26177C99F400778578 /* Default@2x.png in Resources */,
 				F4EECF28177C99F400778578 /* Default-568h@2x.png in Resources */,
+				F09EBCC71866897A009C2BC9 /* myList.jpeg in Resources */,
 				F0718CB9185AC168009014A0 /* share.jpeg in Resources */,
 				F4EECF2B177C99F400778578 /* MainStoryboard.storyboard in Resources */,
 				F4EECF5B177F384900778578 /* bookmark.png in Resources */,
