@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "MainViewController.h"
 
 
 @interface LoginViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *btnFBLogin;
+- (IBAction)didPressLoginButton:(id)sender;
+
 @end
