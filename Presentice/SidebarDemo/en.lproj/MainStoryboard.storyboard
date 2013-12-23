@@ -315,11 +315,11 @@
                                     <segue destination="tiA-fo-4jg" kind="custom" identifier="showSetting" customClass="SWRevealViewControllerSegue" id="oNC-aJ-1i4"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="questionList" id="q1U-bz-nMY">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="questionList" id="q1U-bz-nMY">
                                 <rect key="frame" x="0.0" y="262" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q1U-bz-nMY" id="6bf-sw-RFH">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Question List" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHC-4y-MHw">
@@ -334,6 +334,9 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="y11-ip-fse" kind="custom" identifier="showQuestionList" customClass="SWRevealViewControllerSegue" id="2Qo-ti-0zY"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newsFeed" id="7Kr-jd-OhM">
                                 <rect key="frame" x="0.0" y="322" width="320" height="60"/>
@@ -447,6 +450,55 @@
             </objects>
             <point key="canvasLocation" x="641" y="315"/>
         </scene>
+        <!--Question List View Controller - Main View Controller-->
+        <scene sceneID="VHi-bX-fhO">
+            <objects>
+                <viewController storyboardIdentifier="StoryBoard_QuestionList" title="Main View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="y11-ip-fse" customClass="QuestionListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yZL-9v-efG"/>
+                        <viewControllerLayoutGuide type="bottom" id="to8-5d-xBo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T6E-Fl-QaA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="503" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="45" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="zhs-1R-73C">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="questionListIdentifier" rowHeight="60" id="rF4-l4-JEH">
+                                        <rect key="frame" x="0.0" y="55" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="232" tableViewCell="rF4-l4-JEH" id="w2a-Ga-Lg8">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="gxS-zF-jlg" kind="push" identifier="showFileDetail" id="EkH-A4-bwN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="y11-ip-fse" id="vfM-cF-HRk"/>
+                                    <outlet property="delegate" destination="y11-ip-fse" id="ykW-LH-kxd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Presentation List" id="Ay9-9P-BO5">
+                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="kQi-q5-WKd"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sidebarButton" destination="kQi-q5-WKd" id="ttJ-He-onC"/>
+                        <outlet property="tableView" destination="zhs-1R-73C" id="QsT-8b-Kk5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qav-u6-oLC" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703" y="972"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icon.png" width="800" height="800"/>
@@ -466,6 +518,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="YOI-Ex-RyJ"/>
+        <segue reference="DlK-98-S6x"/>
         <segue reference="hTC-QJ-FLQ"/>
     </inferredMetricsTieBreakers>
 </document>
