@@ -28,6 +28,7 @@
 		A78E9D5A185DA16B00ACCC54 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E9D53185DA16B00ACCC54 /* MBProgressHUD.m */; };
 		A78E9D5B185DA16B00ACCC54 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E9D56185DA16B00ACCC54 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A78E9D5C185DA16B00ACCC54 /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E9D59185DA16B00ACCC54 /* TTTTimeIntervalFormatter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A7E995A51867D197009E48CA /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E995A41867D197009E48CA /* RegisterViewController.m */; };
 		F0718CB0185ABF23009014A0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0718CAF185ABF23009014A0 /* SWRevealViewController.m */; };
 		F0718CB6185AC168009014A0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F0718CB1185AC168009014A0 /* icon.png */; };
 		F0718CB7185AC168009014A0 /* record.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F0718CB2185AC168009014A0 /* record.jpeg */; };
@@ -107,6 +108,8 @@
 		A78E9D56185DA16B00ACCC54 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		A78E9D58185DA16B00ACCC54 /* TTTTimeIntervalFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTTimeIntervalFormatter.h; sourceTree = "<group>"; };
 		A78E9D59185DA16B00ACCC54 /* TTTTimeIntervalFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTimeIntervalFormatter.m; sourceTree = "<group>"; };
+		A7E995A31867D196009E48CA /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		A7E995A41867D197009E48CA /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		F0718CAE185ABF23009014A0 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		F0718CAF185ABF23009014A0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		F0718CB1185AC168009014A0 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -216,6 +219,8 @@
 			children = (
 				A73D5A1218653BF700087F27 /* LoginViewController.h */,
 				A73D5A1318653BF700087F27 /* LoginViewController.m */,
+				A7E995A31867D196009E48CA /* RegisterViewController.h */,
+				A7E995A41867D197009E48CA /* RegisterViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -513,6 +518,7 @@
 				F4EECF2E177C99F400778578 /* MainViewController.m in Sources */,
 				F4EECF4A177DF87700778578 /* SidebarViewController.m in Sources */,
 				A78E9D5A185DA16B00ACCC54 /* MBProgressHUD.m in Sources */,
+				A7E995A51867D197009E48CA /* RegisterViewController.m in Sources */,
 				F4EECF6E177FD51400778578 /* ShareViewController.m in Sources */,
 				F4EECF75177FF90600778578 /* SettingViewController.m in Sources */,
 			);

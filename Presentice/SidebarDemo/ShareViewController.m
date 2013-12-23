@@ -104,7 +104,7 @@
 
 #pragma mark - Image Picker Controller delegate methods
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    if (isUploadFromLibrary) {
+    if (isUploadFromLibrary) {  //upload file from Library
         NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
         if ([mediaType isEqualToString:(NSString *)kUTTypeMovie]) {
             NSURL *urlVideo = [info objectForKey:UIImagePickerControllerMediaURL];
@@ -130,7 +130,7 @@
                 self.uploadFromLibary = [self.tm uploadFile:self.pathForFileFromLibary bucket: [Constants transferManagerBucket] key: uploadFilename];
             }
         }
-    } else {
+    } else {    //capture a video
         NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
         [self dismissViewControllerAnimated:NO completion:nil];
         // Handle a movie capture
@@ -176,6 +176,15 @@
     else if([((S3PutObjectRequest *)request).key isEqualToString:kKeyForBigFile]) {
         self.multipartObjectTextField.text = @"Done";
     }
+    NSLog(@"upload file url: %@", response);
+    //register to Parser DB
+    PFObject *newVideo = [PFObject objectWithClassName:@"Video"];
+    [newVideo setObject:[PFUser currentUser] forKey:@"user"];
+    [newVideo setObject:uploadFilename forKey:@"videoURL"];
+    [newVideo setObject:@"question" forKey:@"type"];
+    [newVideo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        NSLog(@"saved to Parse");
+    }];
 }
 
 -(void)request:(AmazonServiceRequest *)request didFailWithError:(NSError *)error {
