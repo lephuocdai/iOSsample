@@ -16,7 +16,9 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "Constants.h"
 
-@interface ShareViewController : UIViewController <UINavigationControllerDelegate, UIAlertViewDelegate, AmazonServiceRequestDelegate>
+#import <Parse/Parse.h>
+
+@interface ShareViewController : UIViewController <UINavigationControllerDelegate, UIAlertViewDelegate, AmazonServiceRequestDelegate, UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
