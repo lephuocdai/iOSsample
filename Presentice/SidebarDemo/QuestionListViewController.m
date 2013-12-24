@@ -75,7 +75,7 @@
     NSLog(@"didFailWithServiceException called: %@", exception);
 }
 
-#pragma Amazon implemented methods
+#pragma Amazon S3 implemented methods
 
 /**
  * list all file of a bucket and push to table
@@ -125,7 +125,7 @@
 
 #pragma table methods
 /**
- * delegage method
+ * delegate method
  * number of rows of table
  */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
