@@ -42,6 +42,12 @@
 #define kSmallFileSize 1024*1024*4.8 //4.8 megs
 #define kBigFileSize 1024*1024*10  //10 megs
 
+#pragma constants of Parse Table
+
+#pragma Table Video
+#define kVideoClassKey @"Video"
+#define kVideoTypeKey @"type"
+
 @interface Constants : NSObject
 
 /*

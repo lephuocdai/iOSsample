@@ -11,6 +11,7 @@
 #import "ShareViewController.h"
 #import "SettingViewController.h"
 #import "MainViewController.h"
+#import "QuestionListViewController.h"
 
 
 @interface SidebarViewController : UITableViewController

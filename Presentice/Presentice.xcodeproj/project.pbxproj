@@ -29,6 +29,7 @@
 		A78E9D5B185DA16B00ACCC54 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E9D56185DA16B00ACCC54 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A78E9D5C185DA16B00ACCC54 /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E9D59185DA16B00ACCC54 /* TTTTimeIntervalFormatter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7E995A51867D197009E48CA /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E995A41867D197009E48CA /* RegisterViewController.m */; };
+		A7E995A8186860D4009E48CA /* QuestionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E995A7186860D4009E48CA /* QuestionListViewController.m */; };
 		F0718CB0185ABF23009014A0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0718CAF185ABF23009014A0 /* SWRevealViewController.m */; };
 		F0718CB6185AC168009014A0 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F0718CB1185AC168009014A0 /* icon.png */; };
 		F0718CB7185AC168009014A0 /* record.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F0718CB2185AC168009014A0 /* record.jpeg */; };
@@ -110,6 +111,8 @@
 		A78E9D59185DA16B00ACCC54 /* TTTTimeIntervalFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTimeIntervalFormatter.m; sourceTree = "<group>"; };
 		A7E995A31867D196009E48CA /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		A7E995A41867D197009E48CA /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		A7E995A6186860D3009E48CA /* QuestionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionListViewController.h; sourceTree = "<group>"; };
+		A7E995A7186860D4009E48CA /* QuestionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionListViewController.m; sourceTree = "<group>"; };
 		F0718CAE185ABF23009014A0 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		F0718CAF185ABF23009014A0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		F0718CB1185AC168009014A0 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -272,6 +275,8 @@
 				F4EECF2D177C99F400778578 /* MainViewController.m */,
 				F0718CC0185ACEB1009014A0 /* FileViewController.h */,
 				F0718CC1185ACEB1009014A0 /* FileViewController.m */,
+				A7E995A6186860D3009E48CA /* QuestionListViewController.h */,
+				A7E995A7186860D4009E48CA /* QuestionListViewController.m */,
 			);
 			name = Stream;
 			sourceTree = "<group>";
@@ -511,6 +516,7 @@
 				A78E9D5C185DA16B00ACCC54 /* TTTTimeIntervalFormatter.m in Sources */,
 				A73D5A1418653BF700087F27 /* LoginViewController.m in Sources */,
 				F4EECF1E177C99F400778578 /* main.m in Sources */,
+				A7E995A8186860D4009E48CA /* QuestionListViewController.m in Sources */,
 				F4EECF22177C99F400778578 /* AppDelegate.m in Sources */,
 				A78E9D5B185DA16B00ACCC54 /* Reachability.m in Sources */,
 				F0718CC2185ACEB1009014A0 /* FileViewController.m in Sources */,
