@@ -177,7 +177,8 @@
         self.multipartObjectTextField.text = @"Done";
     }
     NSLog(@"upload file url: %@", response);
-    //register to Parser DB
+    
+    // Register to Parser DB
     PFObject *newVideo = [PFObject objectWithClassName:@"Video"];
     [newVideo setObject:[PFUser currentUser] forKey:@"user"];
     [newVideo setObject:uploadFilename forKey:@"videoURL"];

@@ -152,7 +152,7 @@
  * pass video name, video url
  */
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showFileDetail"]) {
+    if ([segue.identifier isEqualToString:@"showQuestionDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         FileViewController *destViewController = segue.destinationViewController;
         destViewController.fileName = [fileList objectAtIndex:indexPath.row][@"fileName"];

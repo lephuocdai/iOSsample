@@ -49,6 +49,7 @@
 		F09EBCC71866897A009C2BC9 /* myList.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F09EBCC61866897A009C2BC9 /* myList.jpeg */; };
 		F09EBCC918672BF9009C2BC9 /* newsFeed.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F09EBCC818672BF9009C2BC9 /* newsFeed.jpeg */; };
 		F09EBCCB18672CC3009C2BC9 /* notification.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F09EBCCA18672CC3009C2BC9 /* notification.jpeg */; };
+		F09EBCCE18691A8C009C2BC9 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F09EBCCD18691A8C009C2BC9 /* QuestionViewController.m */; };
 		F4EECF12177C99F400778578 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EECF11177C99F400778578 /* UIKit.framework */; };
 		F4EECF14177C99F400778578 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EECF13177C99F400778578 /* Foundation.framework */; };
 		F4EECF16177C99F400778578 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4EECF15177C99F400778578 /* CoreGraphics.framework */; };
@@ -135,6 +136,8 @@
 		F09EBCC61866897A009C2BC9 /* myList.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = myList.jpeg; sourceTree = "<group>"; };
 		F09EBCC818672BF9009C2BC9 /* newsFeed.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = newsFeed.jpeg; sourceTree = "<group>"; };
 		F09EBCCA18672CC3009C2BC9 /* notification.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = notification.jpeg; sourceTree = "<group>"; };
+		F09EBCCC18691A8C009C2BC9 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		F09EBCCD18691A8C009C2BC9 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 		F4EECF0E177C99F400778578 /* Presentice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Presentice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4EECF11177C99F400778578 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F4EECF13177C99F400778578 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -271,12 +274,8 @@
 		F0718CBE185ACE41009014A0 /* Stream */ = {
 			isa = PBXGroup;
 			children = (
-				F4EECF2C177C99F400778578 /* MainViewController.h */,
-				F4EECF2D177C99F400778578 /* MainViewController.m */,
-				F0718CC0185ACEB1009014A0 /* FileViewController.h */,
-				F0718CC1185ACEB1009014A0 /* FileViewController.m */,
-				A7E995A6186860D3009E48CA /* QuestionListViewController.h */,
-				A7E995A7186860D4009E48CA /* QuestionListViewController.m */,
+				F09EBCD018691D0C009C2BC9 /* Question */,
+				F09EBCCF18691CF6009C2BC9 /* MyList */,
 			);
 			name = Stream;
 			sourceTree = "<group>";
@@ -284,18 +283,55 @@
 		F0718CBF185ACE8B009014A0 /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				F09EBCD118691D6D009C2BC9 /* PostQuestion */,
+			);
+			name = Share;
+			sourceTree = "<group>";
+		};
+		F09EBCCF18691CF6009C2BC9 /* MyList */ = {
+			isa = PBXGroup;
+			children = (
+				F4EECF2C177C99F400778578 /* MainViewController.h */,
+				F4EECF2D177C99F400778578 /* MainViewController.m */,
+				F0718CC0185ACEB1009014A0 /* FileViewController.h */,
+				F0718CC1185ACEB1009014A0 /* FileViewController.m */,
+			);
+			name = MyList;
+			sourceTree = "<group>";
+		};
+		F09EBCD018691D0C009C2BC9 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				A7E995A6186860D3009E48CA /* QuestionListViewController.h */,
+				A7E995A7186860D4009E48CA /* QuestionListViewController.m */,
+				F09EBCCC18691A8C009C2BC9 /* QuestionViewController.h */,
+				F09EBCCD18691A8C009C2BC9 /* QuestionViewController.m */,
+			);
+			name = Question;
+			sourceTree = "<group>";
+		};
+		F09EBCD118691D6D009C2BC9 /* PostQuestion */ = {
+			isa = PBXGroup;
+			children = (
 				F4EECF6C177FD51300778578 /* ShareViewController.h */,
 				F4EECF6D177FD51300778578 /* ShareViewController.m */,
 			);
-			name = Share;
+			name = PostQuestion;
+			sourceTree = "<group>";
+		};
+		F09EBCD218691D91009C2BC9 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				F4EECF73177FF90500778578 /* SettingViewController.h */,
+				F4EECF74177FF90600778578 /* SettingViewController.m */,
+			);
+			name = Setting;
 			sourceTree = "<group>";
 		};
 		F4EECF05177C99F400778578 = {
 			isa = PBXGroup;
 			children = (
 				A78E9D50185DA15700ACCC54 /* External */,
-				F4EECF71177FE9BA00778578 /* MapKit.framework */,
-				F4EECF6F177FE9B400778578 /* CoreLocation.framework */,
 				F4EECF17177C99F400778578 /* SidebarDemo */,
 				F4EECF10177C99F400778578 /* Frameworks */,
 				F4EECF0F177C99F400778578 /* Products */,
@@ -313,6 +349,8 @@
 		F4EECF10177C99F400778578 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4EECF71177FE9BA00778578 /* MapKit.framework */,
+				F4EECF6F177FE9B400778578 /* CoreLocation.framework */,
 				A78E9D4E185D9F2C00ACCC54 /* CFNetwork.framework */,
 				A78E9D4C185D9F2700ACCC54 /* SystemConfiguration.framework */,
 				A78E9D4A185D9F1300ACCC54 /* AudioToolbox.framework */,
@@ -348,14 +386,11 @@
 		F4EECF17177C99F400778578 /* SidebarDemo */ = {
 			isa = PBXGroup;
 			children = (
-				A73D5A1118653BD700087F27 /* Login */,
+				F09EBCD218691D91009C2BC9 /* Setting */,
 				F4EECF29177C99F400778578 /* MainStoryboard.storyboard */,
+				A73D5A1118653BD700087F27 /* Login */,
 				F0718CBF185ACE8B009014A0 /* Share */,
 				F0718CBE185ACE41009014A0 /* Stream */,
-				F4EECF20177C99F400778578 /* AppDelegate.h */,
-				F4EECF21177C99F400778578 /* AppDelegate.m */,
-				F4EECF73177FF90500778578 /* SettingViewController.h */,
-				F4EECF74177FF90600778578 /* SettingViewController.m */,
 				F4EECF34177C9A1E00778578 /* Library */,
 				F4EECF18177C99F400778578 /* Supporting Files */,
 			);
@@ -365,6 +400,8 @@
 		F4EECF18177C99F400778578 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F4EECF20177C99F400778578 /* AppDelegate.h */,
+				F4EECF21177C99F400778578 /* AppDelegate.m */,
 				F4EECF48177DF87700778578 /* SidebarViewController.h */,
 				F4EECF49177DF87700778578 /* SidebarViewController.m */,
 				F0718CBB185ACE27009014A0 /* Constants.h */,
@@ -522,6 +559,7 @@
 				F0718CC2185ACEB1009014A0 /* FileViewController.m in Sources */,
 				F0718CBD185ACE27009014A0 /* Constants.m in Sources */,
 				F4EECF2E177C99F400778578 /* MainViewController.m in Sources */,
+				F09EBCCE18691A8C009C2BC9 /* QuestionViewController.m in Sources */,
 				F4EECF4A177DF87700778578 /* SidebarViewController.m in Sources */,
 				A78E9D5A185DA16B00ACCC54 /* MBProgressHUD.m in Sources */,
 				A7E995A51867D197009E48CA /* RegisterViewController.m in Sources */,

@@ -22,8 +22,7 @@
     AmazonS3Client *s3Client;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
@@ -32,7 +31,6 @@
     
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated {
