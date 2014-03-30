@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Anypic": {
+            "applicationId": "NoQlDrE7U3ZXdO1C2CQ11iPXrMcCpVkIkHeF9pP0", 
+            "masterKey": "pImh7uYzPW0lnjst17h0S5KWhchJHm8Uai8ng9uf"
+        }, 
+        "_default": {
+            "link": "Anypic"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.6"
+    }
+}
