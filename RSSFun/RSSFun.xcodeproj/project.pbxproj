@@ -22,6 +22,7 @@
 		F0C642E018CAF219000C6F96 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0C642BF18CAF219000C6F96 /* UIKit.framework */; };
 		F0C642E818CAF219000C6F96 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0C642E618CAF219000C6F96 /* InfoPlist.strings */; };
 		F0C642EA18CAF219000C6F96 /* RSSFunTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C642E918CAF219000C6F96 /* RSSFunTests.m */; };
+		F0C642F518CAF2DA000C6F96 /* RSSEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C642F418CAF2DA000C6F96 /* RSSEntry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		F0C642E518CAF219000C6F96 /* RSSFunTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RSSFunTests-Info.plist"; sourceTree = "<group>"; };
 		F0C642E718CAF219000C6F96 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F0C642E918CAF219000C6F96 /* RSSFunTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSSFunTests.m; sourceTree = "<group>"; };
+		F0C642F318CAF2DA000C6F96 /* RSSEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSEntry.h; sourceTree = "<group>"; };
+		F0C642F418CAF2DA000C6F96 /* RSSEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSEntry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,7 @@
 		F0C642C118CAF219000C6F96 /* RSSFun */ = {
 			isa = PBXGroup;
 			children = (
+				F0C642F618CAF2FD000C6F96 /* Model */,
 				F0C642CA18CAF219000C6F96 /* AppDelegate.h */,
 				F0C642CB18CAF219000C6F96 /* AppDelegate.m */,
 				F0C642CD18CAF219000C6F96 /* Main.storyboard */,
@@ -155,6 +159,15 @@
 				F0C642E618CAF219000C6F96 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F0C642F618CAF2FD000C6F96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0C642F318CAF2DA000C6F96 /* RSSEntry.h */,
+				F0C642F418CAF2DA000C6F96 /* RSSEntry.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +271,7 @@
 				F0C642D218CAF219000C6F96 /* MasterViewController.m in Sources */,
 				F0C642C818CAF219000C6F96 /* main.m in Sources */,
 				F0C642D518CAF219000C6F96 /* DetailViewController.m in Sources */,
+				F0C642F518CAF2DA000C6F96 /* RSSEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

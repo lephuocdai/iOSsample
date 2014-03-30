@@ -21,6 +21,11 @@
 		F0E3567618D1598B0096A8AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E3565818D1598A0096A8AB /* UIKit.framework */; };
 		F0E3567E18D1598B0096A8AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0E3567C18D1598B0096A8AB /* InfoPlist.strings */; };
 		F0E3568018D1598B0096A8AB /* PageViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E3567F18D1598B0096A8AB /* PageViewDemoTests.m */; };
+		F0E3568B18D15D9B0096A8AB /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E3568A18D15D9B0096A8AB /* PageContentViewController.m */; };
+		F0E3569118D1600B0096A8AB /* page1.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E3568D18D1600B0096A8AB /* page1.png */; };
+		F0E3569218D1600B0096A8AB /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E3568E18D1600B0096A8AB /* page2.png */; };
+		F0E3569318D1600B0096A8AB /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E3568F18D1600B0096A8AB /* page3.png */; };
+		F0E3569418D1600B0096A8AB /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E3569018D1600B0096A8AB /* page4.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,12 @@
 		F0E3567B18D1598B0096A8AB /* PageViewDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PageViewDemoTests-Info.plist"; sourceTree = "<group>"; };
 		F0E3567D18D1598B0096A8AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F0E3567F18D1598B0096A8AB /* PageViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewDemoTests.m; sourceTree = "<group>"; };
+		F0E3568918D15D9B0096A8AB /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		F0E3568A18D15D9B0096A8AB /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		F0E3568D18D1600B0096A8AB /* page1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page1.png; sourceTree = "<group>"; };
+		F0E3568E18D1600B0096A8AB /* page2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page2.png; sourceTree = "<group>"; };
+		F0E3568F18D1600B0096A8AB /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page3.png; sourceTree = "<group>"; };
+		F0E3569018D1600B0096A8AB /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +130,8 @@
 				F0E3566A18D1598B0096A8AB /* ViewController.m */,
 				F0E3566C18D1598B0096A8AB /* Images.xcassets */,
 				F0E3565B18D1598A0096A8AB /* Supporting Files */,
+				F0E3568918D15D9B0096A8AB /* PageContentViewController.h */,
+				F0E3568A18D15D9B0096A8AB /* PageContentViewController.m */,
 			);
 			path = PageViewDemo;
 			sourceTree = "<group>";
@@ -126,6 +139,7 @@
 		F0E3565B18D1598A0096A8AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F0E3568C18D1600B0096A8AB /* PageViewDemoImages */,
 				F0E3565C18D1598A0096A8AB /* PageViewDemo-Info.plist */,
 				F0E3565D18D1598A0096A8AB /* InfoPlist.strings */,
 				F0E3566018D1598A0096A8AB /* main.m */,
@@ -150,6 +164,17 @@
 				F0E3567C18D1598B0096A8AB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F0E3568C18D1600B0096A8AB /* PageViewDemoImages */ = {
+			isa = PBXGroup;
+			children = (
+				F0E3568D18D1600B0096A8AB /* page1.png */,
+				F0E3568E18D1600B0096A8AB /* page2.png */,
+				F0E3568F18D1600B0096A8AB /* page3.png */,
+				F0E3569018D1600B0096A8AB /* page4.png */,
+			);
+			path = PageViewDemoImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,7 +255,11 @@
 			files = (
 				F0E3566D18D1598B0096A8AB /* Images.xcassets in Resources */,
 				F0E3565F18D1598A0096A8AB /* InfoPlist.strings in Resources */,
+				F0E3569318D1600B0096A8AB /* page3.png in Resources */,
+				F0E3569418D1600B0096A8AB /* page4.png in Resources */,
+				F0E3569118D1600B0096A8AB /* page1.png in Resources */,
 				F0E3566818D1598B0096A8AB /* Main.storyboard in Resources */,
+				F0E3569218D1600B0096A8AB /* page2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0E3566B18D1598B0096A8AB /* ViewController.m in Sources */,
+				F0E3568B18D15D9B0096A8AB /* PageContentViewController.m in Sources */,
 				F0E3566518D1598A0096A8AB /* AppDelegate.m in Sources */,
 				F0E3566118D1598A0096A8AB /* main.m in Sources */,
 			);

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AlbumView : NSObject
+@interface AlbumView : UIView
+
+- (id)initWithFrame:(CGRect)frame albumCover:(NSString*)albumCover;
 
 @end

@@ -10,4 +10,6 @@
 
 @interface Album (TableRepresentation)
 
+- (NSDictionary*)tr_tableRepresentation;
+
 @end
