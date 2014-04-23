@@ -129,7 +129,7 @@ NSString * const kSDSyncEngineSyncCompletedNotificationName = @"SDSyncEngineSync
                 NSDictionary *responseDictionary = responseObject;
                 NSDate *createdDate = [self dateUsingStringFromAPI:[responseDictionary valueForKey:@"createdAt"]];
                 [objectToCreate setValue:createdDate forKey:@"createdAt"];
-                [objectToCreate setValue:[responseDictionary valueForKey@"objectId"] forKey:@"objectId"];
+                [objectToCreate setValue:[responseDictionary valueForKey:@"objectId"] forKey:@"objectId"];
                 [objectToCreate setValue:[NSNumber numberWithInt:SDObjectSynced] forKey:@"syncStatus"];
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 // Log an error if there was one, proper error handling should be done if nessessary, in this case it may not be required
