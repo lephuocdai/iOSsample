@@ -16,7 +16,8 @@
 @implementation FBCDMasterViewController
 
 @synthesize managedObjectContext;
-@synthesize failedBankInfos;
+//@synthesize failedBankInfos;
+@synthesize fetchResultsController = _fetchResultsController;
 
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
@@ -29,18 +30,52 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"FailedBankInfo" inManagedObjectContext:managedObjectContext];
-    [fetchRequest setEntity:entity];
+//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"FailedBankInfo" inManagedObjectContext:managedObjectContext];
+//    [fetchRequest setEntity:entity];
+    
     NSError *error;
-    self.failedBankInfos = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (![[self fetchResultsController] performFetch:&error]) {
+        // Update to handle the error appropriately
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        exit(-1); // Failed
+    }
+//    self.failedBankInfos = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
     self.title = @"Failed Banks";
+}
+
+- (void)viewDidUnload {
+    self.fetchResultsController = nil;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (NSFetchedResultsController*)fetchResultsController {
+    if (_fetchResultsController != nil) {
+        return _fetchResultsController;
+    }
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"FailedBankInfo" inManagedObjectContext:managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"details.closeDate" ascending:NO];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
+    
+    [fetchRequest setFetchBatchSize:20];
+    
+    NSFetchedResultsController *theFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                                                  managedObjectContext:managedObjectContext
+                                                                                                    sectionNameKeyPath:nil
+                                                                                                             cacheName:@"Root"];
+    self.fetchResultsController = theFetchedResultsController;
+    _fetchResultsController.delegate = self;
+    return _fetchResultsController;
+}
+
 
 #pragma mark - Table view data source
 
@@ -49,7 +84,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [failedBankInfos count];
+//    return [failedBankInfos count];
+    id sectionInfo = [[_fetchResultsController sections] objectAtIndex:section];
+    return [sectionInfo numberOfObjects];
+}
+
+- (void)configureCell:(UITableViewCell*)cell atIndexPath:(NSIndexPath*)indexPath {
+    FailedBankInfo *info = [_fetchResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = info.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", info.city, info.state];
 }
 
 
@@ -57,10 +100,10 @@
     static NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    FailedBankInfo *info = [failedBankInfos objectAtIndex:indexPath.row];
-    cell.textLabel.text = info.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", info.city, info.state];
-    
+//    FailedBankInfo *info = [failedBankInfos objectAtIndex:indexPath.row];
+//    cell.textLabel.text = info.name;
+//    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", info.city, info.state];
+    [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
 
@@ -113,5 +156,50 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma makr - NSFetchResultsController delegate
+- (void)controllerWillChangeContent:(NSFetchedResultsController*)controller {
+    // The fetch controller is about to start sending change notifications, so prepare the table view for updates
+    [self.tableView beginUpdates];
+}
+
+- (void)controller:(NSFetchedResultsController*)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
+    UITableView *tableView = self.tableView;
+    
+    switch (type) {
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeUpdate:
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            break;
+        case NSFetchedResultsChangeMove:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+- (void)controller:(NSFetchedResultsController*)controller didChangeSection:(id<NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
+    switch (type) {
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController*)controller {
+    // The fetch controller has sent all current change notifications, so tell the table view to processs all updates
+    [self.tableView endUpdates];
+}
+
+
+
 
 @end
