@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F06603D3190A3468001326FF /* CoreDataTutorial2.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F06603D2190A3468001326FF /* CoreDataTutorial2.sqlite */; };
+		F06603D5190A35CD001326FF /* CoreDataTutorial2.sqlite in CopyFiles */ = {isa = PBXBuildFile; fileRef = F06603D2190A3468001326FF /* CoreDataTutorial2.sqlite */; };
 		F0A6A8041907C60800002AA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A6A8031907C60800002AA4 /* Foundation.framework */; };
 		F0A6A8061907C60800002AA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A6A8051907C60800002AA4 /* CoreGraphics.framework */; };
 		F0A6A8081907C60800002AA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A6A8071907C60800002AA4 /* UIKit.framework */; };
@@ -38,7 +40,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F06603D4190A35C6001326FF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				F06603D5190A35CD001326FF /* CoreDataTutorial2.sqlite in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F06603D2190A3468001326FF /* CoreDataTutorial2.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreDataTutorial2.sqlite; sourceTree = "<group>"; };
 		F0A6A8001907C60800002AA4 /* FailedBankCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FailedBankCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A6A8031907C60800002AA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0A6A8051907C60800002AA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,6 +142,7 @@
 		F0A6A80B1907C60800002AA4 /* FailedBankCD */ = {
 			isa = PBXGroup;
 			children = (
+				F06603D2190A3468001326FF /* CoreDataTutorial2.sqlite */,
 				F0A6A8481907D9EE00002AA4 /* Model */,
 				F0A6A8411907C64000002AA4 /* Controller */,
 				F0A6A8141907C60800002AA4 /* FBCDAppDelegate.h */,
@@ -197,6 +214,7 @@
 				F0A6A7FC1907C60800002AA4 /* Sources */,
 				F0A6A7FD1907C60800002AA4 /* Frameworks */,
 				F0A6A7FE1907C60800002AA4 /* Resources */,
+				F06603D4190A35C6001326FF /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -265,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0A6A8241907C60800002AA4 /* Images.xcassets in Resources */,
+				F06603D3190A3468001326FF /* CoreDataTutorial2.sqlite in Resources */,
 				F0A6A8101907C60800002AA4 /* InfoPlist.strings in Resources */,
 				F0A6A8191907C60800002AA4 /* Main.storyboard in Resources */,
 			);
@@ -495,6 +514,7 @@
 				F0A6A83D1907C60800002AA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0A6A83E1907C60800002AA4 /* Build configuration list for PBXNativeTarget "FailedBankCDTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +523,7 @@
 				F0A6A8401907C60800002AA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
