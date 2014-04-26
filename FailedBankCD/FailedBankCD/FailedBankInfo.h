@@ -2,7 +2,7 @@
 //  FailedBankInfo.h
 //  FailedBankCD
 //
-//  Created by レー フックダイ on 4/23/14.
+//  Created by レー フックダイ on 4/26/14.
 //  Copyright (c) 2014 lephuocdai. All rights reserved.
 //
 
@@ -13,8 +13,8 @@
 
 @interface FailedBankInfo : NSManagedObject
 
-@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * city;
+@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * state;
 @property (nonatomic, retain) FailedBankDetails *details;
 

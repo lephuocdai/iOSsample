@@ -1,20 +1,18 @@
 //
-//  FailedBankInfo.m
+//  Tag.m
 //  FailedBankCD
 //
 //  Created by レー フックダイ on 4/26/14.
 //  Copyright (c) 2014 lephuocdai. All rights reserved.
 //
 
-#import "FailedBankInfo.h"
+#import "Tag.h"
 #import "FailedBankDetails.h"
 
 
-@implementation FailedBankInfo
+@implementation Tag
 
-@dynamic city;
 @dynamic name;
-@dynamic state;
-@dynamic details;
+@dynamic bankdetails;
 
 @end

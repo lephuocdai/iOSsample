@@ -8,6 +8,8 @@
 
 #import "FBCDMasterViewController.h"
 #import "FailedBankInfo.h"
+#import "FailedBankDetails.h"
+#import "SMBankDetailViewController.h"
 
 @interface FBCDMasterViewController ()
 
@@ -42,6 +44,9 @@
     }
 //    self.failedBankInfos = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
     self.title = @"Failed Banks";
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addBank)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(showSearch)];
 }
 
 - (void)viewDidUnload {
@@ -84,7 +89,6 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return [failedBankInfos count];
     id sectionInfo = [[_fetchResultsController sections] objectAtIndex:section];
     return [sectionInfo numberOfObjects];
 }
@@ -95,40 +99,37 @@
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", info.city, info.state];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-//    FailedBankInfo *info = [failedBankInfos objectAtIndex:indexPath.row];
-//    cell.textLabel.text = info.name;
-//    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", info.city, info.state];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [managedObjectContext deleteObject:[self.fetchResultsController objectAtIndexPath:indexPath]];
+        NSError *error = nil;
+        if (![managedObjectContext save:&error]) {
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    FailedBankInfo *info = [_fetchResultsController objectAtIndexPath:indexPath];
+    SMBankDetailViewController *detailViewController = [[SMBankDetailViewController alloc] initWithBankInfo:info];
+    [self.navigationController pushViewController:detailViewController animated:YES];
+}
+
 
 /*
 // Override to support rearranging the table view.
@@ -199,7 +200,28 @@
     [self.tableView endUpdates];
 }
 
-
+#pragma mark BarButtonItem Action
+- (void)addBank {
+    FailedBankInfo *failedBankInfo = (FailedBankInfo *)[NSEntityDescription insertNewObjectForEntityForName:@"FailedBankInfo"
+                                                                                     inManagedObjectContext:managedObjectContext];
+    failedBankInfo.name = @"Test Bank";
+    failedBankInfo.city = @"Testville";
+    failedBankInfo.state = @"Testland";
+    
+    FailedBankDetails *failedBankDetails = [NSEntityDescription insertNewObjectForEntityForName:@"FailedBankDetails"
+                                                                         inManagedObjectContext:managedObjectContext];
+    failedBankDetails.closeDate = [NSDate date];
+    failedBankDetails.updateDate = [NSDate date];
+    failedBankDetails.zip = [NSNumber numberWithInt:123];
+    failedBankDetails.info = failedBankInfo;
+    failedBankInfo.details = failedBankDetails;
+    
+    NSError *error = nil;
+    if (![managedObjectContext save:&error]) {
+        NSLog(@"Error in adding a new bank %@, %@", error, [error userInfo]);
+        abort();
+    }
+}
 
 
 @end

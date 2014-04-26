@@ -18,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    /**
     // Testing
     NSManagedObjectContext *context = [self managedObjectContext];
     FailedBankInfo *failedBankInfo = [NSEntityDescription insertNewObjectForEntityForName:@"FailedBankInfo" inManagedObjectContext:context];
@@ -45,7 +46,7 @@
         FailedBankDetails *details = [info valueForKey:@"details"];
         NSLog(@"Zip: %@", [details valueForKey:@"zip"]);
     }
-    
+    **/
     
     
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
@@ -127,6 +128,7 @@
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"FailedBankCD.sqlite"];
     
+    /**
     if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
         NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"CoreDataTutorial2" ofType:@"sqlite"]];
         NSError *error = nil;
@@ -134,7 +136,7 @@
             NSLog(@"Success copy preloaded data");
         }
     }
-    
+    **/
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];

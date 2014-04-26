@@ -26,8 +26,13 @@
 		F0A6A8361907C60800002AA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0A6A8341907C60800002AA4 /* InfoPlist.strings */; };
 		F0A6A8381907C60800002AA4 /* FailedBankCDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A6A8371907C60800002AA4 /* FailedBankCDTests.m */; };
 		F0A6A8441907C65F00002AA4 /* FBCDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A6A8431907C65F00002AA4 /* FBCDMasterViewController.m */; };
-		F0A6A84B1907DA0600002AA4 /* FailedBankDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A6A84A1907DA0600002AA4 /* FailedBankDetails.m */; };
-		F0A6A84E1907DA6700002AA4 /* FailedBankInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A6A84D1907DA6700002AA4 /* FailedBankInfo.m */; };
+		F0EE454F190AA8FD00367018 /* SMBankDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE454D190AA8FD00367018 /* SMBankDetailViewController.m */; };
+		F0EE4550190AA8FD00367018 /* SMBankDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0EE454E190AA8FD00367018 /* SMBankDetailViewController.xib */; };
+		F0EE4553190B343E00367018 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE4552190B343E00367018 /* Tag.m */; };
+		F0EE4556190B343E00367018 /* FailedBankInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE4555190B343E00367018 /* FailedBankInfo.m */; };
+		F0EE4559190B343F00367018 /* FailedBankDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE4558190B343F00367018 /* FailedBankDetails.m */; };
+		F0EE455D190B34E300367018 /* SMTagListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0EE455B190B34E300367018 /* SMTagListViewController.m */; };
+		F0EE455E190B34E300367018 /* SMTagListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0EE455C190B34E300367018 /* SMTagListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,10 +81,18 @@
 		F0A6A8371907C60800002AA4 /* FailedBankCDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FailedBankCDTests.m; sourceTree = "<group>"; };
 		F0A6A8421907C65F00002AA4 /* FBCDMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBCDMasterViewController.h; sourceTree = "<group>"; };
 		F0A6A8431907C65F00002AA4 /* FBCDMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCDMasterViewController.m; sourceTree = "<group>"; };
-		F0A6A8491907DA0600002AA4 /* FailedBankDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankDetails.h; sourceTree = "<group>"; };
-		F0A6A84A1907DA0600002AA4 /* FailedBankDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankDetails.m; sourceTree = "<group>"; };
-		F0A6A84C1907DA6700002AA4 /* FailedBankInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankInfo.h; sourceTree = "<group>"; };
-		F0A6A84D1907DA6700002AA4 /* FailedBankInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankInfo.m; sourceTree = "<group>"; };
+		F0EE454C190AA8FD00367018 /* SMBankDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBankDetailViewController.h; sourceTree = "<group>"; };
+		F0EE454D190AA8FD00367018 /* SMBankDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMBankDetailViewController.m; sourceTree = "<group>"; };
+		F0EE454E190AA8FD00367018 /* SMBankDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMBankDetailViewController.xib; sourceTree = "<group>"; };
+		F0EE4551190B343E00367018 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
+		F0EE4552190B343E00367018 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
+		F0EE4554190B343E00367018 /* FailedBankInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankInfo.h; sourceTree = "<group>"; };
+		F0EE4555190B343E00367018 /* FailedBankInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankInfo.m; sourceTree = "<group>"; };
+		F0EE4557190B343F00367018 /* FailedBankDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankDetails.h; sourceTree = "<group>"; };
+		F0EE4558190B343F00367018 /* FailedBankDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankDetails.m; sourceTree = "<group>"; };
+		F0EE455A190B34E300367018 /* SMTagListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTagListViewController.h; sourceTree = "<group>"; };
+		F0EE455B190B34E300367018 /* SMTagListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTagListViewController.m; sourceTree = "<group>"; };
+		F0EE455C190B34E300367018 /* SMTagListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMTagListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +201,12 @@
 			children = (
 				F0A6A8421907C65F00002AA4 /* FBCDMasterViewController.h */,
 				F0A6A8431907C65F00002AA4 /* FBCDMasterViewController.m */,
+				F0EE454C190AA8FD00367018 /* SMBankDetailViewController.h */,
+				F0EE454D190AA8FD00367018 /* SMBankDetailViewController.m */,
+				F0EE454E190AA8FD00367018 /* SMBankDetailViewController.xib */,
+				F0EE455A190B34E300367018 /* SMTagListViewController.h */,
+				F0EE455B190B34E300367018 /* SMTagListViewController.m */,
+				F0EE455C190B34E300367018 /* SMTagListViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -196,10 +215,12 @@
 			isa = PBXGroup;
 			children = (
 				F0A6A81A1907C60800002AA4 /* FailedBankCD.xcdatamodeld */,
-				F0A6A84C1907DA6700002AA4 /* FailedBankInfo.h */,
-				F0A6A84D1907DA6700002AA4 /* FailedBankInfo.m */,
-				F0A6A8491907DA0600002AA4 /* FailedBankDetails.h */,
-				F0A6A84A1907DA0600002AA4 /* FailedBankDetails.m */,
+				F0EE4557190B343F00367018 /* FailedBankDetails.h */,
+				F0EE4558190B343F00367018 /* FailedBankDetails.m */,
+				F0EE4554190B343E00367018 /* FailedBankInfo.h */,
+				F0EE4555190B343E00367018 /* FailedBankInfo.m */,
+				F0EE4551190B343E00367018 /* Tag.h */,
+				F0EE4552190B343E00367018 /* Tag.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -286,6 +307,8 @@
 				F06603D3190A3468001326FF /* CoreDataTutorial2.sqlite in Resources */,
 				F0A6A8101907C60800002AA4 /* InfoPlist.strings in Resources */,
 				F0A6A8191907C60800002AA4 /* Main.storyboard in Resources */,
+				F0EE4550190AA8FD00367018 /* SMBankDetailViewController.xib in Resources */,
+				F0EE455E190B34E300367018 /* SMTagListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,11 +327,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0EE4556190B343E00367018 /* FailedBankInfo.m in Sources */,
+				F0EE454F190AA8FD00367018 /* SMBankDetailViewController.m in Sources */,
 				F0A6A81C1907C60800002AA4 /* FailedBankCD.xcdatamodeld in Sources */,
-				F0A6A84B1907DA0600002AA4 /* FailedBankDetails.m in Sources */,
 				F0A6A8121907C60800002AA4 /* main.m in Sources */,
+				F0EE4553190B343E00367018 /* Tag.m in Sources */,
+				F0EE4559190B343F00367018 /* FailedBankDetails.m in Sources */,
+				F0EE455D190B34E300367018 /* SMTagListViewController.m in Sources */,
 				F0A6A8161907C60800002AA4 /* FBCDAppDelegate.m in Sources */,
-				F0A6A84E1907DA6700002AA4 /* FailedBankInfo.m in Sources */,
 				F0A6A8441907C65F00002AA4 /* FBCDMasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
