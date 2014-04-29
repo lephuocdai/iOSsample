@@ -81,7 +81,9 @@
     self.bankInfo.city = self.cityField.text;
     self.bankInfo.details.zip = [NSNumber numberWithInt:[self.zipField.text intValue]];
     self.bankInfo.state = self.stateField.text;
-    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    self.bankInfo.details.closeDate = [dateFormatter dateFromString:self.dateLabel.text];
     NSError *error;
     if ([self.bankInfo.managedObjectContext hasChanges] && ![self.bankInfo.managedObjectContext save:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);

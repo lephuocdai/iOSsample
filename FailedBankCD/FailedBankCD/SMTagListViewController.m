@@ -43,6 +43,17 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addTag)];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    self.bankDetails.tags = pickedTags;
+    NSError *error;
+    if (![self.bankDetails.managedObjectContext save:&error]) {
+        NSLog(@"Error in saving tags %@, %@", error, [error userInfo]);
+        abort();
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

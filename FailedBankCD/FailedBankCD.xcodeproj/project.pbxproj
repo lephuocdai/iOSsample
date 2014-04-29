@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F06603D3190A3468001326FF /* CoreDataTutorial2.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F06603D2190A3468001326FF /* CoreDataTutorial2.sqlite */; };
 		F06603D5190A35CD001326FF /* CoreDataTutorial2.sqlite in CopyFiles */ = {isa = PBXBuildFile; fileRef = F06603D2190A3468001326FF /* CoreDataTutorial2.sqlite */; };
+		F0688D00190FF64500E933F8 /* SMSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0688CFE190FF64500E933F8 /* SMSearchViewController.m */; };
+		F0688D01190FF64500E933F8 /* SMSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0688CFF190FF64500E933F8 /* SMSearchViewController.xib */; };
 		F0A6A8041907C60800002AA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A6A8031907C60800002AA4 /* Foundation.framework */; };
 		F0A6A8061907C60800002AA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A6A8051907C60800002AA4 /* CoreGraphics.framework */; };
 		F0A6A8081907C60800002AA4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A6A8071907C60800002AA4 /* UIKit.framework */; };
@@ -60,6 +62,9 @@
 
 /* Begin PBXFileReference section */
 		F06603D2190A3468001326FF /* CoreDataTutorial2.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreDataTutorial2.sqlite; sourceTree = "<group>"; };
+		F0688CFD190FF64500E933F8 /* SMSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSearchViewController.h; sourceTree = "<group>"; };
+		F0688CFE190FF64500E933F8 /* SMSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSearchViewController.m; sourceTree = "<group>"; };
+		F0688CFF190FF64500E933F8 /* SMSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SMSearchViewController.xib; sourceTree = "<group>"; };
 		F0A6A8001907C60800002AA4 /* FailedBankCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FailedBankCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A6A8031907C60800002AA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0A6A8051907C60800002AA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -207,6 +212,9 @@
 				F0EE455A190B34E300367018 /* SMTagListViewController.h */,
 				F0EE455B190B34E300367018 /* SMTagListViewController.m */,
 				F0EE455C190B34E300367018 /* SMTagListViewController.xib */,
+				F0688CFD190FF64500E933F8 /* SMSearchViewController.h */,
+				F0688CFE190FF64500E933F8 /* SMSearchViewController.m */,
+				F0688CFF190FF64500E933F8 /* SMSearchViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -304,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0A6A8241907C60800002AA4 /* Images.xcassets in Resources */,
+				F0688D01190FF64500E933F8 /* SMSearchViewController.xib in Resources */,
 				F06603D3190A3468001326FF /* CoreDataTutorial2.sqlite in Resources */,
 				F0A6A8101907C60800002AA4 /* InfoPlist.strings in Resources */,
 				F0A6A8191907C60800002AA4 /* Main.storyboard in Resources */,
@@ -327,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0688D00190FF64500E933F8 /* SMSearchViewController.m in Sources */,
 				F0EE4556190B343E00367018 /* FailedBankInfo.m in Sources */,
 				F0EE454F190AA8FD00367018 /* SMBankDetailViewController.m in Sources */,
 				F0A6A81C1907C60800002AA4 /* FailedBankCD.xcdatamodeld in Sources */,

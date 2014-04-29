@@ -10,6 +10,7 @@
 #import "FailedBankInfo.h"
 #import "FailedBankDetails.h"
 #import "SMBankDetailViewController.h"
+#import "SMSearchViewController.h"
 
 @interface FBCDMasterViewController ()
 
@@ -221,6 +222,13 @@
         NSLog(@"Error in adding a new bank %@, %@", error, [error userInfo]);
         abort();
     }
+}
+
+- (void)showSearch {
+    SMSearchViewController *searchViewController = [[SMSearchViewController alloc] init];
+    searchViewController.managedObjectContext = managedObjectContext;
+    [self.navigationController presentModalViewController:searchViewController
+                                                 animated:YES];
 }
 
 
