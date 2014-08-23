@@ -65,7 +65,7 @@
 	zip_fileinfo zipInfo = {0};
 //	zipInfo.dosDate = (unsigned long) current;
 	
-	NSDictionary* attr = [[NSFileManager defaultManager] fileAttributesAtPath:file traverseLink:YES];
+	NSDictionary* attr = [[NSFileManager defaultManager] attributesOfItemAtPath:file error:nil];
 	if( attr )
 	{
 		NSDate* fileDate = (NSDate*)[attr objectForKey:NSFileModificationDate];
@@ -77,12 +77,12 @@
 			uint flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | 
 				NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit ;
 			NSDateComponents* dc = [currCalendar components:flags fromDate:fileDate];
-			zipInfo.tmz_date.tm_sec = [dc second];
-			zipInfo.tmz_date.tm_min = [dc minute];
-			zipInfo.tmz_date.tm_hour = [dc hour];
-			zipInfo.tmz_date.tm_mday = [dc day];
-			zipInfo.tmz_date.tm_mon = [dc month] - 1;
-			zipInfo.tmz_date.tm_year = [dc year];
+			zipInfo.tmz_date.tm_sec = (int)[dc second];
+			zipInfo.tmz_date.tm_min = (int)[dc minute];
+			zipInfo.tmz_date.tm_hour = (int)[dc hour];
+			zipInfo.tmz_date.tm_mday = (int)[dc day];
+			zipInfo.tmz_date.tm_mon = (int)[dc month] - 1;
+			zipInfo.tmz_date.tm_year = (int)[dc year];
 		}
 	}
 	
@@ -103,7 +103,7 @@
 	{
 		data = [ NSData dataWithContentsOfFile:file];
 		uLong crcValue = crc32( 0L,NULL, 0L );
-		crcValue = crc32( crcValue, (const Bytef*)[data bytes], [data length] );
+		crcValue = crc32( crcValue, (const Bytef*)[data bytes], (int)[data length] );
 		ret = zipOpenNewFileInZip3( _zipFile,
 								  (const char*) [newname UTF8String],
 								  &zipInfo,
@@ -127,7 +127,7 @@
 	{
 		data = [ NSData dataWithContentsOfFile:file];
 	}
-	unsigned int dataLen = [data length];
+	unsigned int dataLen = (int)[data length];
 	ret = zipWriteInFileInZip( _zipFile, (const void*)[data bytes], dataLen);
 	if( ret!=Z_OK )
 	{
@@ -155,9 +155,8 @@
 	if( _unzFile )
 	{
 		unz_global_info  globalInfo = {0};
-		if( unzGetGlobalInfo(_unzFile, &globalInfo )==UNZ_OK )
-		{
-			NSLog([NSString stringWithFormat:@"%d entries in the zip file",globalInfo.number_entry] );
+		if( unzGetGlobalInfo(_unzFile, &globalInfo )==UNZ_OK ) {
+			NSLog(@"%lu entries in the zip file",globalInfo.number_entry);
 		}
 	}
 	return _unzFile!=NULL;
@@ -207,7 +206,7 @@
 		filename[fileInfo.size_filename] = '\0';
 		
 		// check if it contains directory
-		NSString * strPath = [NSString  stringWithCString:filename];
+		NSString * strPath = [NSString  stringWithCString:filename encoding:NSASCIIStringEncoding];
 		BOOL isDirectory = NO;
 		if( filename[fileInfo.size_filename-1]=='/' || filename[fileInfo.size_filename-1]=='\\')
 			isDirectory = YES;

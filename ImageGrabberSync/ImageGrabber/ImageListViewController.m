@@ -83,10 +83,10 @@
 
 - (void)imageInfosAvailable:(NSArray *)newInfos done:(BOOL)done {
     
-    NSLog(@"Image infos available: %d!", newInfos.count);
+    NSLog(@"Image infos available: %lu!", (unsigned long)newInfos.count);
     
     NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:newInfos.count];
-    for(int i = imageInfos.count; i < imageInfos.count + newInfos.count; ++i) {
+    for(int i = (int)imageInfos.count; i < (int)imageInfos.count + newInfos.count; ++i) {
         NSIndexPath * indexPath = [NSIndexPath indexPathForRow:i inSection:0];
         [indexPaths addObject:indexPath];
     }

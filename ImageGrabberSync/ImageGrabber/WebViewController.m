@@ -52,7 +52,8 @@
     NSURL *url = [NSURL URLWithString:@"http://www.vickiwenderlich.com/2011/06/game-art-pack-monkey-platformer/"];
     NSURLRequest * request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
-    grabButton.enabled = NO;
+//    grabButton.enabled = NO;
+//    grabButton.enabled = YES;
 }
 
 - (void)viewDidUnload
@@ -75,7 +76,8 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     numLoads++;
-    grabButton.enabled = NO;
+//    grabButton.enabled = NO;
+    grabButton.enabled = YES;
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
