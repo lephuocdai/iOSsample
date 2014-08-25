@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <dispatch/dispatch.h>
 
 @protocol ImageManagerDelegate 
 - (void)imageInfosAvailable:(NSArray *)imageInfos done:(BOOL)done;
@@ -14,6 +15,7 @@
 
 @interface ImageManager : NSObject {
     int pendingZips;
+    dispatch_queue_t backgroundQueue;
 }
 
 @property (retain) NSString * html;

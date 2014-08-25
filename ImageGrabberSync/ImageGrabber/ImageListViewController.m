@@ -46,8 +46,7 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
         
     // Uncomment the following line to preserve selection between presentations.
@@ -79,6 +78,7 @@
     self.imageManager = [[[ImageManager alloc] initWithHTML:html delegate:self] autorelease];
     [imageManager process];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageUpdated:) name:@"com.presentice.imagegrabber.imageupdated" object:nil];
 }
 
 - (void)imageInfosAvailable:(NSArray *)newInfos done:(BOOL)done {
@@ -217,6 +217,17 @@
     imageDetailViewController.info = info;
     [self.navigationController pushViewController:imageDetailViewController animated:YES];
     
+}
+
+#pragma mark - Image Update
+- (void)imageUpdated:(NSNotification *)notif {
+    ImageInfo *info = [notif object];
+    int row = (int)[imageInfos indexOfObject:info];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+    
+    NSLog(@"Image for row %d updated!", row);
+    
+    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 @end

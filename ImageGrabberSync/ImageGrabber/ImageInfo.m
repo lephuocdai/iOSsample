@@ -7,6 +7,7 @@
 //
 
 #import "ImageInfo.h"
+#import "ASIHTTPRequest.h"
 
 @implementation ImageInfo
 
@@ -18,13 +19,26 @@
     
     NSLog(@"Getting %@...", sourceURL);
     
-    NSData * data = [NSData dataWithContentsOfURL:sourceURL];
-    if (!data) {
-        NSLog(@"Error retrieving %@", sourceURL);
-        return;
-    }
+//    NSData * data = [NSData dataWithContentsOfURL:sourceURL];
+//    if (!data) {
+//        NSLog(@"Error retrieving %@", sourceURL);
+//        return;
+//    }
+//    
+//    image = [[UIImage alloc] initWithData:data];
     
-    image = [[UIImage alloc] initWithData:data];
+    __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:sourceURL];
+    [request setCompletionBlock:^{
+        NSLog(@"Image downloaded");
+        NSData *data = [request responseData];
+        image = [[UIImage alloc] initWithData:data];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"com.presentice.imagegrabber.imageupdated" object:self userInfo:nil];
+    }];
+    [request setFailedBlock:^{
+        NSError *error = [request error];
+        NSLog(@"Error downloading image: %@", error.localizedDescription);
+    }];
+    [request startAsynchronous];
 }
 
 - (id)initWithSourceURL:(NSURL *)URL {
