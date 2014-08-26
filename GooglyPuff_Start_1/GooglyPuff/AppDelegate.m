@@ -10,8 +10,7 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackTranslucent];
     return YES;
 }
