@@ -26,8 +26,8 @@ const CGFloat kFaceBoundsToEyeScaleFactor = 4.0f;
 #pragma mark - LifeCycle
 //*****************************************************************************/
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
     NSAssert(_image, @"Image not set; required to use view controller");
     self.photoImageView.image = _image;
@@ -37,9 +37,13 @@ const CGFloat kFaceBoundsToEyeScaleFactor = 4.0f;
         _image.size.width <= self.photoImageView.bounds.size.width) {
         [self.photoImageView setContentMode:UIViewContentModeCenter];
     }
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        UIImage *overlayImage = [self faceOverlayImageFromImage:_image];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self fadeInNewImage:overlayImage];
+        });
+    });
     
-    UIImage *overlayImage = [self faceOverlayImageFromImage:_image];
-    [self fadeInNewImage:overlayImage];
 }
 
 //*****************************************************************************/
