@@ -58,45 +58,41 @@
 
 - (void)downloadPhotosWithCompletionBlock:(BatchPhotoDownloadingCompletionBlock)completionBlock
 {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        
-        __block NSError *error;
-        dispatch_group_t downloadGroup = dispatch_group_create();
-        
-        for (NSInteger i = 0; i < 3; i++) {
-            NSURL *url;
-            switch (i) {
-                case 0:
-                    url = [NSURL URLWithString:kOverlyAttachedGirlfriendURLString];
-                    break;
-                case 1:
-                    url = [NSURL URLWithString:kSuccessKidURLString];
-                    break;
-                case 2:
-                    url = [NSURL URLWithString:kLotsOfFacesURLString];
-                    break;
-                default:
-                    break;
-            }
-            
-            dispatch_group_enter(downloadGroup);
-            
-            Photo *photo = [[Photo alloc] initwithURL:url
-                                  withCompletionBlock:^(UIImage *image, NSError *_error) {
-                                      if (_error) {
-                                          error = _error;
-                                      }
-                                      dispatch_group_leave(downloadGroup);
-                                  }];
-            
-            [[PhotoManager sharedManager] addPhoto:photo];
+    __block NSError *error;
+    dispatch_group_t downloadGroup = dispatch_group_create();
+    
+    for (NSInteger i = 0; i < 3; i++) {
+        NSURL *url;
+        switch (i) {
+            case 0:
+                url = [NSURL URLWithString:kOverlyAttachedGirlfriendURLString];
+                break;
+            case 1:
+                url = [NSURL URLWithString:kSuccessKidURLString];
+                break;
+            case 2:
+                url = [NSURL URLWithString:kLotsOfFacesURLString];
+                break;
+            default:
+                break;
         }
-        dispatch_group_wait(downloadGroup, DISPATCH_TIME_FOREVER);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (completionBlock) {
-                completionBlock(error);
-            }
-        });
+        
+        dispatch_group_enter(downloadGroup);
+        
+        Photo *photo = [[Photo alloc] initwithURL:url
+                              withCompletionBlock:^(UIImage *image, NSError *_error) {
+                                  if (_error) {
+                                      error = _error;
+                                  }
+                                  dispatch_group_leave(downloadGroup);
+                              }];
+        
+        [[PhotoManager sharedManager] addPhoto:photo];
+    }
+    dispatch_group_notify(downloadGroup, dispatch_get_main_queue(), ^{
+        if (completionBlock) {
+            completionBlock(error);
+        }
     });
 }
 
