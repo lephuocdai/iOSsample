@@ -45,18 +45,26 @@ const int64_t kDefaultTimeoutLengthInNanoSeconds = 10000000000; // 10 Seconds
 
 - (void)downloadImageURLWithString:(NSString *)URLString
 {
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    
     NSURL *url = [NSURL URLWithString:URLString];
-    __block BOOL isFinishedDownloading = NO;
+//    __block BOOL isFinishedDownloading = NO;
     __unused Photo *photo = [[Photo alloc]
                              initwithURL:url
                              withCompletionBlock:^(UIImage *image, NSError *error) {
                                  if (error) {
                                      XCTFail(@"%@ failed. %@", URLString, error);
                                  }
-                                 isFinishedDownloading = YES;
+//                                 isFinishedDownloading = YES;
+                                 dispatch_semaphore_signal(semaphore);
                              }];
+    dispatch_time_t timeoutTime = dispatch_time(DISPATCH_TIME_NOW, kDefaultTimeoutLengthInNanoSeconds);
+    if (dispatch_semaphore_wait(semaphore, timeoutTime)) {
+        XCTFail(@"%@ timed out", URLString);
+    }
     
-    while (!isFinishedDownloading) {}
+    
+//    while (!isFinishedDownloading) {}
 }
 
 @end
