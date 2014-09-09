@@ -8,6 +8,7 @@
 
 #import "RWViewController.h"
 #import "RWDummySignInService.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface RWViewController ()
 
@@ -25,18 +26,25 @@
 @implementation RWViewController
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
+    [super viewDidLoad];
+    
+    [self updateUIState];
+    
+    self.signInService = [RWDummySignInService new];
+    
+    // handle text changes for both text fields
+    [self.usernameTextField addTarget:self action:@selector(usernameTextFieldChanged) forControlEvents:UIControlEventEditingChanged];
+    [self.passwordTextField addTarget:self action:@selector(passwordTextFieldChanged) forControlEvents:UIControlEventEditingChanged];
+    
+    // initially hide the failure message
+    self.signInFailureText.hidden = YES;
   
-  [self updateUIState];
-  
-  self.signInService = [RWDummySignInService new];
-  
-  // handle text changes for both text fields
-  [self.usernameTextField addTarget:self action:@selector(usernameTextFieldChanged) forControlEvents:UIControlEventEditingChanged];
-  [self.passwordTextField addTarget:self action:@selector(passwordTextFieldChanged) forControlEvents:UIControlEventEditingChanged];
-  
-  // initially hide the failure message
-  self.signInFailureText.hidden = YES;
+    [[self.usernameTextField.rac_textSignal
+      filter:^BOOL(NSString *text) {
+          return text.length > 3;
+      }] subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
 }
 
 - (BOOL)isValidUsername:(NSString *)username {
