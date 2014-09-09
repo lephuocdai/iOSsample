@@ -39,9 +39,12 @@
     // initially hide the failure message
     self.signInFailureText.hidden = YES;
   
-    [[self.usernameTextField.rac_textSignal
-      filter:^BOOL(NSString *text) {
-          return text.length > 3;
+    [[[self.usernameTextField.rac_textSignal
+       map:^id(NSString *text) {
+           return @(text.length);
+       }]
+      filter:^BOOL(NSNumber *length) {
+          return [length integerValue] > 3;
       }] subscribeNext:^(id x) {
         NSLog(@"%@", x);
     }];
