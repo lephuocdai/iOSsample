@@ -37,6 +37,7 @@
 		F0F7DC5419CDE60A0027B43B /* TipCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F7DC5919CDE60A0027B43B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0F7DC5A19CDE60A0027B43B /* TipCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorTests.swift; sourceTree = "<group>"; };
+		F0FA582819E134A0000185F5 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 				F0F7DC4B19CDE6090027B43B /* Main.storyboard */,
 				F0F7DC4E19CDE6090027B43B /* Images.xcassets */,
 				F0F7DC4519CDE6090027B43B /* Supporting Files */,
+				F0FA582819E134A0000185F5 /* MyPlayground.playground */,
 			);
 			path = TipCalculator;
 			sourceTree = "<group>";

@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78704691186703BC00401921 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78704690186703BC00401921 /* SenTestingKit.framework */; };
+		78704692186703BC00401921 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DB87F91858F0CC00BF5054 /* Foundation.framework */; };
+		78704693186703BC00401921 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DB87FD1858F0CC00BF5054 /* UIKit.framework */; };
+		78704699186703BC00401921 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78704697186703BC00401921 /* InfoPlist.strings */; };
+		787046A3186703DC00401921 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 787046A2186703DC00401921 /* libKIF.a */; };
+		787046A4186703E300401921 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DB87FB1858F0CC00BF5054 /* CoreGraphics.framework */; };
+		788CAB7818614E5100DEFD37 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 788CAB7718614E5100DEFD37 /* DetailsViewController.m */; };
+		78957B0D1866FBDA0000EDAE /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 78957B0A1866FBDA0000EDAE /* icon-120.png */; };
+		78957B0E1866FBDA0000EDAE /* icon-58.png in Resources */ = {isa = PBXBuildFile; fileRef = 78957B0B1866FBDA0000EDAE /* icon-58.png */; };
+		78957B0F1866FBDA0000EDAE /* icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = 78957B0C1866FBDA0000EDAE /* icon-80.png */; };
+		78BDFB6C1866FE7500F4B074 /* tab-settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 78BDFB681866FE7500F4B074 /* tab-settings.png */; };
+		78BDFB6D1866FE7500F4B074 /* tab-settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78BDFB691866FE7500F4B074 /* tab-settings@2x.png */; };
+		78BDFB6E1866FE7500F4B074 /* tab-timer.png in Resources */ = {isa = PBXBuildFile; fileRef = 78BDFB6A1866FE7500F4B074 /* tab-timer.png */; };
+		78BDFB6F1866FE7500F4B074 /* tab-timer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78BDFB6B1866FE7500F4B074 /* tab-timer@2x.png */; };
+		78BDFB711867007500F4B074 /* alert.caf in Resources */ = {isa = PBXBuildFile; fileRef = 78BDFB701867006C00F4B074 /* alert.caf */; };
+		78BDFB731867009800F4B074 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BDFB721867009800F4B074 /* AVFoundation.framework */; };
+		78D9006E185E115C00650F3F /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D9006D185E115C00650F3F /* HistoryViewController.m */; };
+		78D90071185E181000650F3F /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D90070185E181000650F3F /* WorkViewController.m */; };
+		78DB87FA1858F0CC00BF5054 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DB87F91858F0CC00BF5054 /* Foundation.framework */; };
+		78DB87FC1858F0CC00BF5054 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DB87FB1858F0CC00BF5054 /* CoreGraphics.framework */; };
+		78DB87FE1858F0CC00BF5054 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DB87FD1858F0CC00BF5054 /* UIKit.framework */; };
+		78DB88041858F0CC00BF5054 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78DB88021858F0CC00BF5054 /* InfoPlist.strings */; };
+		78DB88061858F0CC00BF5054 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DB88051858F0CC00BF5054 /* main.m */; };
+		78DB880A1858F0CC00BF5054 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DB88091858F0CC00BF5054 /* AppDelegate.m */; };
+		78DB880D1858F0CC00BF5054 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DB880B1858F0CC00BF5054 /* Main.storyboard */; };
+		78DB88121858F0CC00BF5054 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78DB88111858F0CC00BF5054 /* Images.xcassets */; };
+		78E4CED4185962BA000ED8FC /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E4CED3185962BA000ED8FC /* SettingsViewController.m */; };
+		78E4CED718597235000ED8FC /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E4CED618597235000ED8FC /* TimerViewController.m */; };
+		78E4CEDA185B93DC000ED8FC /* PresetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E4CED9185B93DC000ED8FC /* PresetsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7870469D186703BC00401921 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78DB87EE1858F0CC00BF5054 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78DB87F51858F0CC00BF5054;
+			remoteInfo = solanum;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7870468F186703BC00401921 /* UI Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78704690186703BC00401921 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		78704696186703BC00401921 /* UI Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UI Tests-Info.plist"; sourceTree = "<group>"; };
+		78704698186703BC00401921 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7870469C186703BC00401921 /* UI Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UI Tests-Prefix.pch"; sourceTree = "<group>"; };
+		787046A2186703DC00401921 /* libKIF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKIF.a; path = "../../Library/Developer/Xcode/DerivedData/solanum-dgtmxsxmewpsicdkhbvveoamrbif/Build/Products/Debug-iphoneos/libKIF.a"; sourceTree = "<group>"; };
+		788CAB7618614E5100DEFD37 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		788CAB7718614E5100DEFD37 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		788CAB791861563500DEFD37 /* StringKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringKeys.h; sourceTree = "<group>"; };
+		78957B0A1866FBDA0000EDAE /* icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-120.png"; sourceTree = "<group>"; };
+		78957B0B1866FBDA0000EDAE /* icon-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-58.png"; sourceTree = "<group>"; };
+		78957B0C1866FBDA0000EDAE /* icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-80.png"; sourceTree = "<group>"; };
+		78BDFB681866FE7500F4B074 /* tab-settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-settings.png"; sourceTree = "<group>"; };
+		78BDFB691866FE7500F4B074 /* tab-settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-settings@2x.png"; sourceTree = "<group>"; };
+		78BDFB6A1866FE7500F4B074 /* tab-timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-timer.png"; sourceTree = "<group>"; };
+		78BDFB6B1866FE7500F4B074 /* tab-timer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-timer@2x.png"; sourceTree = "<group>"; };
+		78BDFB701867006C00F4B074 /* alert.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alert.caf; sourceTree = "<group>"; };
+		78BDFB721867009800F4B074 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		78D9006C185E115C00650F3F /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		78D9006D185E115C00650F3F /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		78D9006F185E181000650F3F /* WorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkViewController.h; sourceTree = "<group>"; };
+		78D90070185E181000650F3F /* WorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkViewController.m; sourceTree = "<group>"; };
+		78DB87F61858F0CC00BF5054 /* solanum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = solanum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78DB87F91858F0CC00BF5054 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		78DB87FB1858F0CC00BF5054 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		78DB87FD1858F0CC00BF5054 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		78DB88011858F0CC00BF5054 /* solanum-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "solanum-Info.plist"; sourceTree = "<group>"; };
+		78DB88031858F0CC00BF5054 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		78DB88051858F0CC00BF5054 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		78DB88071858F0CC00BF5054 /* solanum-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "solanum-Prefix.pch"; sourceTree = "<group>"; };
+		78DB88081858F0CC00BF5054 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		78DB88091858F0CC00BF5054 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		78DB880C1858F0CC00BF5054 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		78DB88111858F0CC00BF5054 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		78DB88181858F0CC00BF5054 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		78E4CED2185962BA000ED8FC /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		78E4CED3185962BA000ED8FC /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		78E4CED518597235000ED8FC /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		78E4CED618597235000ED8FC /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		78E4CED8185B93DC000ED8FC /* PresetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresetsViewController.h; sourceTree = "<group>"; };
+		78E4CED9185B93DC000ED8FC /* PresetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresetsViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7870468C186703BC00401921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				787046A4186703E300401921 /* CoreGraphics.framework in Frameworks */,
+				787046A3186703DC00401921 /* libKIF.a in Frameworks */,
+				78704691186703BC00401921 /* SenTestingKit.framework in Frameworks */,
+				78704693186703BC00401921 /* UIKit.framework in Frameworks */,
+				78704692186703BC00401921 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78DB87F31858F0CC00BF5054 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78BDFB731867009800F4B074 /* AVFoundation.framework in Frameworks */,
+				78DB87FC1858F0CC00BF5054 /* CoreGraphics.framework in Frameworks */,
+				78DB87FE1858F0CC00BF5054 /* UIKit.framework in Frameworks */,
+				78DB87FA1858F0CC00BF5054 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78704694186703BC00401921 /* UI Tests */ = {
+			isa = PBXGroup;
+			children = (
+				78704695186703BC00401921 /* Supporting Files */,
+			);
+			path = "UI Tests";
+			sourceTree = "<group>";
+		};
+		78704695186703BC00401921 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				78704696186703BC00401921 /* UI Tests-Info.plist */,
+				78704697186703BC00401921 /* InfoPlist.strings */,
+				7870469C186703BC00401921 /* UI Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		78957B091866FBDA0000EDAE /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				78BDFB681866FE7500F4B074 /* tab-settings.png */,
+				78BDFB691866FE7500F4B074 /* tab-settings@2x.png */,
+				78BDFB6A1866FE7500F4B074 /* tab-timer.png */,
+				78BDFB6B1866FE7500F4B074 /* tab-timer@2x.png */,
+				78957B0A1866FBDA0000EDAE /* icon-120.png */,
+				78957B0B1866FBDA0000EDAE /* icon-58.png */,
+				78957B0C1866FBDA0000EDAE /* icon-80.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
+		78DB87ED1858F0CC00BF5054 = {
+			isa = PBXGroup;
+			children = (
+				78DB87FF1858F0CC00BF5054 /* solanum */,
+				78704694186703BC00401921 /* UI Tests */,
+				78DB87F81858F0CC00BF5054 /* Frameworks */,
+				78DB87F71858F0CC00BF5054 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		78DB87F71858F0CC00BF5054 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78DB87F61858F0CC00BF5054 /* solanum.app */,
+				7870468F186703BC00401921 /* UI Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78DB87F81858F0CC00BF5054 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				787046A2186703DC00401921 /* libKIF.a */,
+				78BDFB721867009800F4B074 /* AVFoundation.framework */,
+				78DB87F91858F0CC00BF5054 /* Foundation.framework */,
+				78DB87FB1858F0CC00BF5054 /* CoreGraphics.framework */,
+				78DB87FD1858F0CC00BF5054 /* UIKit.framework */,
+				78DB88181858F0CC00BF5054 /* XCTest.framework */,
+				78704690186703BC00401921 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78DB87FF1858F0CC00BF5054 /* solanum */ = {
+			isa = PBXGroup;
+			children = (
+				78DB88081858F0CC00BF5054 /* AppDelegate.h */,
+				78DB88091858F0CC00BF5054 /* AppDelegate.m */,
+				78DB880B1858F0CC00BF5054 /* Main.storyboard */,
+				788CAB791861563500DEFD37 /* StringKeys.h */,
+				78E4CED2185962BA000ED8FC /* SettingsViewController.h */,
+				78E4CED3185962BA000ED8FC /* SettingsViewController.m */,
+				78E4CED518597235000ED8FC /* TimerViewController.h */,
+				78E4CED618597235000ED8FC /* TimerViewController.m */,
+				78E4CED8185B93DC000ED8FC /* PresetsViewController.h */,
+				78E4CED9185B93DC000ED8FC /* PresetsViewController.m */,
+				78D9006C185E115C00650F3F /* HistoryViewController.h */,
+				78D9006D185E115C00650F3F /* HistoryViewController.m */,
+				78D9006F185E181000650F3F /* WorkViewController.h */,
+				78D90070185E181000650F3F /* WorkViewController.m */,
+				788CAB7618614E5100DEFD37 /* DetailsViewController.h */,
+				788CAB7718614E5100DEFD37 /* DetailsViewController.m */,
+				78DB88111858F0CC00BF5054 /* Images.xcassets */,
+				78BDFB701867006C00F4B074 /* alert.caf */,
+				78DB88001858F0CC00BF5054 /* Supporting Files */,
+				78957B091866FBDA0000EDAE /* icons */,
+			);
+			path = solanum;
+			sourceTree = "<group>";
+		};
+		78DB88001858F0CC00BF5054 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				78DB88011858F0CC00BF5054 /* solanum-Info.plist */,
+				78DB88021858F0CC00BF5054 /* InfoPlist.strings */,
+				78DB88051858F0CC00BF5054 /* main.m */,
+				78DB88071858F0CC00BF5054 /* solanum-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7870468E186703BC00401921 /* UI Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 787046A1186703BC00401921 /* Build configuration list for PBXNativeTarget "UI Tests" */;
+			buildPhases = (
+				7870468B186703BC00401921 /* Sources */,
+				7870468C186703BC00401921 /* Frameworks */,
+				7870468D186703BC00401921 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7870469E186703BC00401921 /* PBXTargetDependency */,
+			);
+			name = "UI Tests";
+			productName = "UI Tests";
+			productReference = 7870468F186703BC00401921 /* UI Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		78DB87F51858F0CC00BF5054 /* solanum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78DB88281858F0CC00BF5054 /* Build configuration list for PBXNativeTarget "solanum" */;
+			buildPhases = (
+				78DB87F21858F0CC00BF5054 /* Sources */,
+				78DB87F31858F0CC00BF5054 /* Frameworks */,
+				78DB87F41858F0CC00BF5054 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = solanum;
+			productName = solanum;
+			productReference = 78DB87F61858F0CC00BF5054 /* solanum.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78DB87EE1858F0CC00BF5054 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Razeware;
+				TargetAttributes = {
+					7870468E186703BC00401921 = {
+						TestTargetID = 78DB87F51858F0CC00BF5054;
+					};
+				};
+			};
+			buildConfigurationList = 78DB87F11858F0CC00BF5054 /* Build configuration list for PBXProject "solanum" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78DB87ED1858F0CC00BF5054;
+			productRefGroup = 78DB87F71858F0CC00BF5054 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78DB87F51858F0CC00BF5054 /* solanum */,
+				7870468E186703BC00401921 /* UI Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7870468D186703BC00401921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78704699186703BC00401921 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78DB87F41858F0CC00BF5054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78957B0D1866FBDA0000EDAE /* icon-120.png in Resources */,
+				78DB88121858F0CC00BF5054 /* Images.xcassets in Resources */,
+				78BDFB6C1866FE7500F4B074 /* tab-settings.png in Resources */,
+				78957B0F1866FBDA0000EDAE /* icon-80.png in Resources */,
+				78DB88041858F0CC00BF5054 /* InfoPlist.strings in Resources */,
+				78BDFB6D1866FE7500F4B074 /* tab-settings@2x.png in Resources */,
+				78BDFB6F1866FE7500F4B074 /* tab-timer@2x.png in Resources */,
+				78BDFB6E1866FE7500F4B074 /* tab-timer.png in Resources */,
+				78957B0E1866FBDA0000EDAE /* icon-58.png in Resources */,
+				78DB880D1858F0CC00BF5054 /* Main.storyboard in Resources */,
+				78BDFB711867007500F4B074 /* alert.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7870468B186703BC00401921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78DB87F21858F0CC00BF5054 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78E4CEDA185B93DC000ED8FC /* PresetsViewController.m in Sources */,
+				78DB880A1858F0CC00BF5054 /* AppDelegate.m in Sources */,
+				78E4CED718597235000ED8FC /* TimerViewController.m in Sources */,
+				78D90071185E181000650F3F /* WorkViewController.m in Sources */,
+				78DB88061858F0CC00BF5054 /* main.m in Sources */,
+				78D9006E185E115C00650F3F /* HistoryViewController.m in Sources */,
+				78E4CED4185962BA000ED8FC /* SettingsViewController.m in Sources */,
+				788CAB7818614E5100DEFD37 /* DetailsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7870469E186703BC00401921 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78DB87F51858F0CC00BF5054 /* solanum */;
+			targetProxy = 7870469D186703BC00401921 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		78704697186703BC00401921 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78704698186703BC00401921 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		78DB88021858F0CC00BF5054 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78DB88031858F0CC00BF5054 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		78DB880B1858F0CC00BF5054 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78DB880C1858F0CC00BF5054 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7870469F186703BC00401921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/solanum.app/solanum";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UI Tests/UI Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "UI Tests/UI Tests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/solanum-dgtmxsxmewpsicdkhbvveoamrbif/Build/Products/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		787046A0186703BC00401921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/solanum.app/solanum";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UI Tests/UI Tests-Prefix.pch";
+				INFOPLIST_FILE = "UI Tests/UI Tests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/solanum-dgtmxsxmewpsicdkhbvveoamrbif/Build/Products/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		78DB88261858F0CC00BF5054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		78DB88271858F0CC00BF5054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78DB88291858F0CC00BF5054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "solanum/solanum-Prefix.pch";
+				INFOPLIST_FILE = "solanum/solanum-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		78DB882A1858F0CC00BF5054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "solanum/solanum-Prefix.pch";
+				INFOPLIST_FILE = "solanum/solanum-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		787046A1186703BC00401921 /* Build configuration list for PBXNativeTarget "UI Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7870469F186703BC00401921 /* Debug */,
+				787046A0186703BC00401921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		78DB87F11858F0CC00BF5054 /* Build configuration list for PBXProject "solanum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78DB88261858F0CC00BF5054 /* Debug */,
+				78DB88271858F0CC00BF5054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78DB88281858F0CC00BF5054 /* Build configuration list for PBXNativeTarget "solanum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78DB88291858F0CC00BF5054 /* Debug */,
+				78DB882A1858F0CC00BF5054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78DB87EE1858F0CC00BF5054 /* Project object */;
+}
