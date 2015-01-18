@@ -36,6 +36,7 @@
 		78E4CED4185962BA000ED8FC /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E4CED3185962BA000ED8FC /* SettingsViewController.m */; };
 		78E4CED718597235000ED8FC /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E4CED618597235000ED8FC /* TimerViewController.m */; };
 		78E4CEDA185B93DC000ED8FC /* PresetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E4CED9185B93DC000ED8FC /* PresetsViewController.m */; };
+		F0F016271A6A6120009856C5 /* UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F016261A6A6120009856C5 /* UITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,8 @@
 		78E4CED618597235000ED8FC /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		78E4CED8185B93DC000ED8FC /* PresetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresetsViewController.h; sourceTree = "<group>"; };
 		78E4CED9185B93DC000ED8FC /* PresetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresetsViewController.m; sourceTree = "<group>"; };
+		F0F016251A6A6120009856C5 /* UITests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITests.h; sourceTree = "<group>"; };
+		F0F016261A6A6120009856C5 /* UITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				78704695186703BC00401921 /* Supporting Files */,
+				F0F016251A6A6120009856C5 /* UITests.h */,
+				F0F016261A6A6120009856C5 /* UITests.m */,
 			);
 			path = "UI Tests";
 			sourceTree = "<group>";
@@ -241,7 +246,7 @@
 			name = "UI Tests";
 			productName = "UI Tests";
 			productReference = 7870468F186703BC00401921 /* UI Tests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		78DB87F51858F0CC00BF5054 /* solanum */ = {
 			isa = PBXNativeTarget;
@@ -327,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F016271A6A6120009856C5 /* UITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +549,7 @@
 				787046A0186703BC00401921 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78DB87F11858F0CC00BF5054 /* Build configuration list for PBXProject "solanum" */ = {
 			isa = XCConfigurationList;
